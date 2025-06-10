@@ -1,6 +1,8 @@
 
 -- listar todos os alunos matriculados em uma disciplina específica em um determinado período 
-
+SELECT ma.NomeAluno ma.SobrenomeAluno
+FROM  Matricula ma
+WHERE ma.CodigoDisc = "DISC015" AND ma.DataMatric = "2023-03-15"
 
 -- Nota final média dos alunos naquela disciplina  
 

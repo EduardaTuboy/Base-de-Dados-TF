@@ -36,31 +36,12 @@ CREATE TABLE CursoDepartamento (
     FOREIGN KEY (CodigoDepartamento) REFERENCES Departamento(Codigo)
 );
 
-CREATE TABLE Compor (
-    CodigoCurso VARCHAR(10) PRIMARY KEY,
-    CodigoDisciplina VARCHAR(10),
-    FOREIGN KEY (CodigoCurso) REFERENCES Curso(Codigo),
-    FOREIGN KEY (CodigoDisciplina) REFERENCES Disciplina(Codigo)
-);
-
-CREATE TABLE Matricular (
-    NomeAluno VARCHAR(50) PRIMARY KEY,
-    SobrenomeAluno VARCHAR(50) PRIMARY KEY,
-    TelefoneAluno VARCHAR(20) PRIMARY KEY,
-    CodigoDisciplina VARCHAR(10) PRIMARY KEY,
-    FOREIGN KEY (CodigoDisciplina) REFERENCES Disciplina(Codigo)
-    FOREIGN KEY (NomeAluno) REFERENCES Aluno(Nome),
-    FOREIGN KEY (SobrenomeAluno) REFERENCES Aluno(Sobrenome),
-    FOREIGN KEY (TelefoneAluno) REFERENCES Aluno(Telefone)
-);
-
-CREATE TABLE Responsabilizar (
-    NomeProf VARCHAR(50),
-    SobrenomeProf VARCHAR(50),
-    TelefoneProf VARCHAR(20),
-    CodigoDisciplina VARCHAR(10),
-    FOREIGN KEY (NomeProf,SobrenomeProf,TelefoneProf) REFERENCES Professor(Nome,Sobrenome,Telefone),
-    FOREIGN KEY (CodigoDisciplina) REFERENCES Disciplina(Codigo)
+-- Tabela Disciplina
+CREATE TABLE Disciplina (
+    Codigo VARCHAR(10) PRIMARY KEY,
+    Nome VARCHAR(100) NOT NULL UNIQUE,
+    QuantAulas INT,
+    MaterialDidatico VARCHAR(100)
 );
 
 -- Tabela Usuario
@@ -95,6 +76,17 @@ CREATE TABLE Professor (
     FOREIGN KEY (Nome, Sobrenome, Telefone) REFERENCES Usuario(Nome, Sobrenome, Telefone)
 );
 
+CREATE TABLE Responsabilizar (
+    NomeProf VARCHAR(50),
+    SobrenomeProf VARCHAR(50),
+    TelefoneProf VARCHAR(20),
+    CodigoDisciplina VARCHAR(10),
+    FOREIGN KEY (NomeProf,SobrenomeProf,TelefoneProf) REFERENCES Professor(Nome,Sobrenome,Telefone),
+    FOREIGN KEY (CodigoDisciplina) REFERENCES Disciplina(Codigo)
+);
+
+
+
 CREATE TABLE Funcionario (
     Nome VARCHAR(50),
     Sobrenome VARCHAR(50),
@@ -104,13 +96,15 @@ CREATE TABLE Funcionario (
     FOREIGN KEY (Nome, Sobrenome, Telefone) REFERENCES Usuario(Nome, Sobrenome, Telefone)
 );
 
--- Tabela Disciplina
-CREATE TABLE Disciplina (
-    Codigo VARCHAR(10) PRIMARY KEY,
-    Nome VARCHAR(100) NOT NULL UNIQUE,
-    QuantAulas INT,
-    MaterialDidatico VARCHAR(100)
+
+
+CREATE TABLE Compor (
+    CodigoCurso VARCHAR(10) PRIMARY KEY,
+    CodigoDisciplina VARCHAR(10),
+    FOREIGN KEY (CodigoCurso) REFERENCES Curso(Codigo),
+    FOREIGN KEY (CodigoDisciplina) REFERENCES Disciplina(Codigo)
 );
+
 
 -- Tabela Matricula
 CREATE TABLE Matricula (
@@ -131,6 +125,18 @@ CREATE TABLE Matricula (
     PRIMARY KEY (NomeAluno, SobrenomeAluno, TelefoneAluno, CodigoDisc),
     FOREIGN KEY (NomeAluno, SobrenomeAluno, TelefoneAluno) REFERENCES Aluno(Nome, Sobrenome, Telefone),
     FOREIGN KEY (CodigoDisc) REFERENCES Disciplina(Codigo)
+);
+
+ -- talvez nao pracisa pois ja ta tudo em matricula
+CREATE TABLE Matricular (
+    NomeAluno VARCHAR(50) PRIMARY KEY,
+    SobrenomeAluno VARCHAR(50) PRIMARY KEY,
+    TelefoneAluno VARCHAR(20) PRIMARY KEY,
+    CodigoDisciplina VARCHAR(10) PRIMARY KEY,
+    FOREIGN KEY (CodigoDisciplina) REFERENCES Disciplina(Codigo),
+    FOREIGN KEY (NomeAluno) REFERENCES Aluno(Nome),
+    FOREIGN KEY (SobrenomeAluno) REFERENCES Aluno(Sobrenome),
+    FOREIGN KEY (TelefoneAluno) REFERENCES Aluno(Telefone)
 );
 
 -- Tabelas Restantes (exemplos com 5+ tuplas)
