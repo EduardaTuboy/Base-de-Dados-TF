@@ -7,9 +7,51 @@
 -- Criando a base de dados
 CREATE DATABASE tidia
     WITH
-    OWNER = postgress
+    OWNER = postgres
     ENCODING = 'UTF8'
     CONNECTION LIMIT = -1;
+
+-- Tabela Usuario
+CREATE TABLE Usuario (
+    Nome VARCHAR(50),
+    Sobrenome VARCHAR(50),
+    Telefone VARCHAR(20),
+    Posicao VARCHAR(50),
+    Data_Nasc DATE,
+    Endereco VARCHAR(100),
+    Sexo CHAR(1),
+    Email VARCHAR(100) NOT NULL,
+    PRIMARY KEY (Nome, Sobrenome, Telefone),
+    CONSTRAINT EmailUsuario UNIQUE (Email)
+);
+
+-- Tabelas Especializadas (Aluno, Professor, Funcionário)
+CREATE TABLE Aluno (
+    Nome VARCHAR(50),
+    Sobrenome VARCHAR(50),
+    Telefone VARCHAR(20),
+    PRIMARY KEY (Nome, Sobrenome, Telefone),
+    FOREIGN KEY (Nome, Sobrenome, Telefone) REFERENCES Usuario(Nome, Sobrenome, Telefone)
+);
+
+CREATE TABLE Funcionario (
+    Nome VARCHAR(50),
+    Sobrenome VARCHAR(50),
+    Telefone VARCHAR(20),
+    Operacao VARCHAR(50),
+    PRIMARY KEY (Nome, Sobrenome, Telefone),
+    FOREIGN KEY (Nome, Sobrenome, Telefone) REFERENCES Usuario(Nome, Sobrenome, Telefone)
+);
+
+CREATE TABLE Professor (
+    Nome VARCHAR(50),
+    Sobrenome VARCHAR(50),
+    Telefone VARCHAR(20),
+    Especializacao VARCHAR(100),
+    Titulacao VARCHAR(50),
+    PRIMARY KEY (Nome, Sobrenome, Telefone),
+    FOREIGN KEY (Nome, Sobrenome, Telefone) REFERENCES Usuario(Nome, Sobrenome, Telefone)
+);
 
 -- Tabela Departamento
 CREATE TABLE Departamento (
@@ -19,8 +61,8 @@ CREATE TABLE Departamento (
     SobrenomeProf VARCHAR(50),
     TelefoneProf VARCHAR(20),
     CodigoDisciplina VARCHAR(10),
-    CONSTRAINT NomeDepartamento UNIQUE Nome
-    CONSTRAINT Chefe UNIQUE (NomeProf,SobrenomeProf,TelefoneProf)
+    CONSTRAINT NomeDepartamento UNIQUE (Nome),
+    CONSTRAINT Chefe UNIQUE (NomeProf,SobrenomeProf,TelefoneProf),
     FOREIGN KEY (NomeProf,SobrenomeProf,TelefoneProf) REFERENCES Professor(Nome,Sobrenome,Telefone)
 );
 
@@ -43,52 +85,8 @@ CREATE TABLE Disciplina (
     Nome VARCHAR(100) NOT NULL,
     QuantAulas INT,
     MaterialDidatico VARCHAR(100),
-    CONSTRAINT NomeDisciplina UNIQUE Nome
+    CONSTRAINT NomeDisciplina UNIQUE (Nome)
 );
-
--- Tabela Usuario
-CREATE TABLE Usuario (
-    Nome VARCHAR(50),
-    Sobrenome VARCHAR(50),
-    Telefone VARCHAR(20),
-    Posicao VARCHAR(50),
-    Data_Nasc DATE,
-    Endereco VARCHAR(100),
-    Sexo CHAR(1),
-    Email VARCHAR(100) NOT NULL,
-    PRIMARY KEY (Nome, Sobrenome, Telefone),
-    CONSTRAINT EmailUsuario UNIQUE Email
-);
-
--- Tabelas Especializadas (Aluno, Professor, Funcionário)
-CREATE TABLE Aluno (
-    Nome VARCHAR(50),
-    Sobrenome VARCHAR(50),
-    Telefone VARCHAR(20),
-    PRIMARY KEY (Nome, Sobrenome, Telefone),
-    FOREIGN KEY (Nome, Sobrenome, Telefone) REFERENCES Usuario(Nome, Sobrenome, Telefone)
-);
-
-CREATE TABLE Professor (
-    Nome VARCHAR(50),
-    Sobrenome VARCHAR(50),
-    Telefone VARCHAR(20),
-    Especializacao VARCHAR(100),
-    Titulacao VARCHAR(50),
-    PRIMARY KEY (Nome, Sobrenome, Telefone),
-    FOREIGN KEY (Nome, Sobrenome, Telefone) REFERENCES Usuario(Nome, Sobrenome, Telefone)
-);
-
-
-CREATE TABLE Funcionario (
-    Nome VARCHAR(50),
-    Sobrenome VARCHAR(50),
-    Telefone VARCHAR(20),
-    Operacao VARCHAR(50),
-    PRIMARY KEY (Nome, Sobrenome, Telefone),
-    FOREIGN KEY (Nome, Sobrenome, Telefone) REFERENCES Usuario(Nome, Sobrenome, Telefone)
-);
-
 
 CREATE TABLE Responsabilizar (
     NomeProf VARCHAR(50),
@@ -101,19 +99,19 @@ CREATE TABLE Responsabilizar (
 );
 
 CREATE TABLE Compor (
-    CodigoCurso VARCHAR(10) PRIMARY KEY,
+    CodigoCurso VARCHAR(10),
     CodigoDisciplina VARCHAR(10),
+    PRIMARY KEY (CodigoCurso, CodigoDisciplina),
     FOREIGN KEY (CodigoCurso) REFERENCES Curso(Codigo),
-    FOREIGN KEY (CodigoDisciplina) REFERENCES Disciplina(Codigo),
-    PRIMARY KEY (CodigoCurso, CodigoDisciplina)
+    FOREIGN KEY (CodigoDisciplina) REFERENCES Disciplina(Codigo)
 );
 
 -- Tabela Matricula
 CREATE TABLE Matricula (
-    NomeAluno VARCHAR(50) PRIMARY KEY,
-    SobrenomeAluno VARCHAR(50) PRIMARY KEY,
-    TelefoneAluno VARCHAR(20) PRIMARY KEY,
-    CodigoDisciplina VARCHAR(10) PRIMARY KEY,
+    NomeAluno VARCHAR(50),
+    SobrenomeAluno VARCHAR(50),
+    TelefoneAluno VARCHAR(20),
+    CodigoDisciplina VARCHAR(10),
     CodigoDisc VARCHAR(10),
     DataMatric DATE,
     Ativa BOOLEAN,
@@ -126,7 +124,7 @@ CREATE TABLE Matricula (
     Data_Limite DATE,
     Taxas DECIMAL(10,2),
     PRIMARY KEY (CodigoDisc,NomeAluno, SobrenomeAluno,TelefoneAluno,DataMatric),
-    FOREIGN KEY (NomeAluno) REFERENCES Aluno(Nome,Sobrenome,Telefone),
+    FOREIGN KEY (NomeAluno, SobrenomeAluno,TelefoneAluno) REFERENCES Aluno(Nome,Sobrenome,Telefone),
     FOREIGN KEY (CodigoDisc) REFERENCES Disciplina(Codigo)
 );
 
@@ -234,10 +232,10 @@ CREATE TABLE Receber (
     TelefoneDestinatario VARCHAR(20),
     TempoMensagem TIME,
     DataMensagem DATE,
-    PRIMARY KEY (NomeRemetente, SobrenomeRemetente, TelefoneRemetente, TempoMensagem, DataMensagem,NomeDestinatario,SobrenomeDestinatario,TelefoneDestinatario),
+    PRIMARY KEY (NomeRemetente, SobrenomeRemetente, TelefoneRemetente, TempoMensagem, DataMensagem, NomeDestinatario, SobrenomeDestinatario, TelefoneDestinatario),
     FOREIGN KEY (NomeRemetente, SobrenomeRemetente, TelefoneRemetente) REFERENCES Usuario(Nome, Sobrenome, Telefone),
     FOREIGN KEY (NomeDestinatario,SobrenomeDestinatario,TelefoneDestinatario) REFERENCES Usuario(Nome, Sobrenome, Telefone),
-    FOREIGN KEY (TempoMensagem, DataMensagem) REFERENCES Mensagem(TempoMensagem, DataMensagem)
+    FOREIGN KEY (NomeRemetente, SobrenomeRemetente, TelefoneRemetente, TempoMensagem, DataMensagem) REFERENCES Mensagem(NomeUsuario, SobrenomeUsuario, TelefoneUsuario, TempoMensagem, DataMensagem)
 );
 
 -- Tabela Exigir

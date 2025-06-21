@@ -452,7 +452,7 @@ VALUES
 ('Henrique', 'Rodrigues', '(11) 98765-4328', 'ROB301-1', '2025-07-15', FALSE, TRUE, FALSE, FALSE, NULL, 'Extensão', 'Mensalidade10%', '2025-07-25', 55.55),
 
 -- Isabela Ferreira (5 disciplinas)
-('Isabela', 'Ferreira', '(11) 98765-4329', 'MAT101-1', '2025-02-02', FALSE, FALSE, TRUE, FALSE, 8.9, 'Monitoria', 'Mensalidade50%', '2025-02-15', 30.00),
+('Isabela', 'Ferreira', '(11) 98765-4329', 'MAT101-1', '2025-02-02', TRUE, FALSE, TRUE, FALSE, 8.9, 'Monitoria', 'Mensalidade50%', '2025-02-15', 30.00),
 ('Isabela', 'Ferreira', '(11) 98765-4329', 'GEO101-1', '2025-02-02', FALSE, FALSE, FALSE, TRUE, 3.5, 'Monitoria', 'Mensalidade50%', '2025-02-15', 70.50),
 ('Isabela', 'Ferreira', '(11) 98765-4329', 'LIT101-1', '2025-02-02', FALSE, FALSE, TRUE, FALSE, 6.0, NULL, 'Mensalidade50%', '2025-02-15', 12.25),
 ('Isabela', 'Ferreira', '(11) 98765-4329', 'ART101-1', '2025-07-15', FALSE, FALSE, TRUE, FALSE, 7.4, 'Monitoria', 'Mensalidade50%', '2025-07-25', 45.80),
@@ -460,7 +460,7 @@ VALUES
 
 -- João Gomes (5 disciplinas)
 ('João', 'Gomes', '(11) 98765-4330', 'MAT101-2', '2025-02-02', FALSE, FALSE, TRUE, FALSE, 7.7, NULL, 'Transporte', '2025-02-15', 60.00),
-('João', 'Gomes', '(11) 98765-4330', 'HIST101-1', '2025-02-02', FALSE, FALSE, FALSE, TRUE, 4.6, NULL, 'Transporte', '2025-02-15', 25.75),
+('João', 'Gomes', '(11) 98765-4330', 'HIST101-1', '2025-02-02', TRUE, FALSE, FALSE, TRUE, 4.6, NULL, 'Transporte', '2025-02-15', 25.75),
 ('João', 'Gomes', '(11) 98765-4330', 'ING101-1', '2025-02-02', FALSE, FALSE, TRUE, FALSE, 6.8, NULL, 'Transporte', '2025-02-15', 82.10),
 ('João', 'Gomes', '(11) 98765-4330', 'SOC101-1', '2025-07-15', FALSE, FALSE, TRUE, FALSE, 5.2, NULL, 'Transporte', '2025-07-25', 37.45),
 ('João', 'Gomes', '(11) 98765-4330', 'EDF101-1', '2025-07-15', FALSE, FALSE, FALSE, TRUE, 3.9, NULL, 'Transporte', '2025-07-25', 15.90),
@@ -470,12 +470,12 @@ VALUES
 ('Larissa', 'Lima', '(11) 98765-4331', 'FIL101-1', '2025-02-02', FALSE, FALSE, FALSE, TRUE, 4.3, 'Pesquisa', 'RU', '2025-02-15', 65.25),
 ('Larissa', 'Lima', '(11) 98765-4331', 'ESP101-1', '2025-02-02', FALSE, FALSE, TRUE, FALSE, 7.5, NULL, 'RU', '2025-02-15', 22.80),
 ('Larissa', 'Lima', '(11) 98765-4331', 'LITB201-1', '2025-07-15', FALSE, FALSE, TRUE, FALSE, 6.3, 'Pesquisa', 'RU', '2025-07-25', 75.00),
-('Larissa', 'Lima', '(11) 98765-4331', 'PSI101-1', '2025-07-15', FALSE, FALSE, TRUE, FALSE, 5.7, 'Pesquisa', 'RU', '2025-07-25', 32.15),
+('Larissa', 'Lima', '(11) 98765-4331', 'PSI101-1', '2025-07-15', TRUE, FALSE, TRUE, FALSE, 5.7, 'Pesquisa', 'RU', '2025-07-25', 32.15),
 
 -- Marcos Souza (5 disciplinas)
 ('Marcos', 'Souza', '(11) 98765-4332', 'MATF201-1', '2025-02-02', FALSE, FALSE, TRUE, FALSE, 8.3, 'Extensão', 'Mensalidade10%', '2025-02-15', 33.33),
 ('Marcos', 'Souza', '(11) 98765-4332', 'PORT101-1', '2025-02-02', FALSE, FALSE, FALSE, TRUE, 3.9, 'Extensão', 'Mensalidade10%', '2025-02-15', 66.66),
-('Marcos', 'Souza', '(11) 98765-4332', 'ARTD201-1', '2025-02-02', FALSE, FALSE, TRUE, FALSE, 6.7, NULL, 'Mensalidade10%', '2025-02-15', 22.22),
+('Marcos', 'Souza', '(11) 98765-4332', 'ARTD201-1', '2025-02-02', TRUE, FALSE, TRUE, FALSE, 6.7, NULL, 'Mensalidade10%', '2025-02-15', 22.22),
 ('Marcos', 'Souza', '(11) 98765-4332', 'BIOM301-1', '2025-07-15', FALSE, FALSE, TRUE, FALSE, 7.8, 'Extensão', 'Mensalidade10%', '2025-07-25', 88.88),
 ('Marcos', 'Souza', '(11) 98765-4332', 'ROB301-1', '2025-07-15', FALSE, FALSE, FALSE, TRUE, 4.5, 'Extensão', 'Mensalidade10%', '2025-07-25', 55.55),
 
@@ -488,7 +488,7 @@ VALUES
 
 -- Otávio Ribeiro (5 disciplinas)
 ('Otávio', 'Ribeiro', '(11) 98765-4334', 'MAT101-2', '2025-02-02', FALSE, FALSE, TRUE, FALSE, 7.4, NULL, 'Transporte', '2025-02-15', 55.50),
-('Otávio', 'Ribeiro', '(11) 98765-4334', 'HIST101-1', '2025-02-02', FALSE, FALSE, TRUE, FALSE, 6.2, NULL, 'Transporte', '2025-02-15', 35.75),
+('Otávio', 'Ribeiro', '(11) 98765-4334', 'HIST101-1', '2025-02-02', TRUE, FALSE, TRUE, FALSE, 6.2, NULL, 'Transporte', '2025-02-15', 35.75),
 ('Otávio', 'Ribeiro', '(11) 98765-4334', 'ING101-1', '2025-02-02', FALSE, FALSE, FALSE, TRUE, 4.8, NULL, 'Transporte', '2025-02-15', 18.90),
 ('Otávio', 'Ribeiro', '(11) 98765-4334', 'SOC101-1', '2025-07-15', FALSE, FALSE, TRUE, FALSE, 5.5, NULL, 'Transporte', '2025-07-25', 72.45),
 ('Otávio', 'Ribeiro', '(11) 98765-4334', 'EDF101-1', '2025-07-15', FALSE, FALSE, TRUE, FALSE, 6.0, NULL, 'Transporte', '2025-07-25', 28.15),
@@ -534,7 +534,7 @@ VALUES
 -- Arthur Vasconcelos (5 disciplinas)
 ('Arthur', 'Vasconcelos', '(11) 98765-4391', 'MATF201-1', '2025-02-02', FALSE, FALSE, TRUE, FALSE, 8.1, 'Extensão', 'Mensalidade10%', '2025-02-15', 11.11),
 ('Arthur', 'Vasconcelos', '(11) 98765-4391', 'PORT101-1', '2025-02-02', FALSE, TRUE, FALSE, FALSE, NULL, 'Extensão', 'Mensalidade10%', '2025-02-15', 54.32),
-('Arthur', 'Vasconcelos', '(11) 98765-4391', 'ARTD201-1', '2025-02-02', FALSE, FALSE, TRUE, FALSE, 6.3, 'Extensão', 'Mensalidade10%', '2025-02-15', 88.88),
+('Arthur', 'Vasconcelos', '(11) 98765-4391', 'ARTD201-1', '2025-02-02', TRUE, FALSE, TRUE, FALSE, 6.3, 'Extensão', 'Mensalidade10%', '2025-02-15', 88.88),
 ('Arthur', 'Vasconcelos', '(11) 98765-4391', 'BIOM301-1', '2025-07-15', FALSE, FALSE, TRUE, FALSE, 7.4, NULL, 'Mensalidade10%', '2025-07-25', 22.22),
 ('Arthur', 'Vasconcelos', '(11) 98765-4391', 'ROB301-1', '2025-07-15', FALSE, FALSE, FALSE, TRUE, 4.9, 'Extensão', 'Mensalidade10%', '2025-07-25', 77.77),
 
@@ -581,10 +581,10 @@ VALUES
 ('Gustavo', 'Bittencourt', '(11) 98765-4397', 'EDF101-1', '2025-07-15', FALSE, FALSE, TRUE, FALSE, 6.3, NULL, 'Transporte', '2025-07-25', 24.15),
 
 -- Heloísa Coutinho (5 disciplinas)
-('Heloísa', 'Coutinho', '(11) 98765-4398', 'QUI101-1', '2025-02-02', FALSE, FALSE, TRUE, FALSE, 8.6, 'Pesquisa', 'RU', '2025-02-15', 46.50),
+('Heloísa', 'Coutinho', '(11) 98765-4398', 'QUI101-1', '2025-02-02', TRUE, FALSE, TRUE, FALSE, 8.6, 'Pesquisa', 'RU', '2025-02-15', 46.50),
 ('Heloísa', 'Coutinho', '(11) 98765-4398', 'FIL101-1', '2025-02-02', FALSE, FALSE, FALSE, TRUE, 4.0, 'Pesquisa', 'RU', '2025-02-15', 67.35),
 ('Heloísa', 'Coutinho', '(11) 98765-4398', 'ESP101-1', '2025-02-02', FALSE, FALSE, TRUE, FALSE, 7.4, NULL, 'RU', '2025-02-15', 23.90),
-('Heloísa', 'Coutinho', '(11) 98765-4398', 'LITB201-1', '2025-07-15', FALSE, FALSE, TRUE, FALSE, 6.7, 'Pesquisa', 'RU', '2025-07-25', 77.00),
+('Heloísa', 'Coutinho', '(11) 98765-4398', 'LITB201-1', '2025-07-15', TRUE, FALSE, TRUE, FALSE, 6.7, 'Pesquisa', 'RU', '2025-07-25', 77.00),
 ('Heloísa', 'Coutinho', '(11) 98765-4398', 'PSI101-1', '2025-07-15', FALSE, FALSE, TRUE, FALSE, 5.5, 'Pesquisa', 'RU', '2025-07-25', 35.05),
 
 -- Igor Dorneles (5 disciplinas)
@@ -598,7 +598,7 @@ VALUES
 ('Juliana', 'Espíndola', '(11) 98765-4400', 'MAT101-1', '2025-02-02', FALSE, FALSE, TRUE, FALSE, 8.8, 'Monitoria', 'Mensalidade50%', '2025-02-15', 56.00),
 ('Juliana', 'Espíndola', '(11) 98765-4400', 'GEO101-1', '2025-02-02', FALSE, FALSE, FALSE, TRUE, 3.7, 'Monitoria', 'Mensalidade50%', '2025-02-15', 34.50),
 ('Juliana', 'Espíndola', '(11) 98765-4400', 'LIT101-1', '2025-02-02', FALSE, FALSE, TRUE, FALSE, 6.6, NULL, 'Mensalidade50%', '2025-02-15', 17.25),
-('Juliana', 'Espíndola', '(11) 98765-4400', 'ART101-1', '2025-07-15', FALSE, FALSE, TRUE, FALSE, 7.1, 'Monitoria', 'Mensalidade50%', '2025-07-25', 69.75),
+('Juliana', 'Espíndola', '(11) 98765-4400', 'ART101-1', '2025-07-15', TRUE, FALSE, TRUE, FALSE, 7.1, 'Monitoria', 'Mensalidade50%', '2025-07-25', 69.75),
 ('Juliana', 'Espíndola', '(11) 98765-4400', 'FIS101-1', '2025-07-15', FALSE, FALSE, FALSE, TRUE, 4.3, 'Monitoria', 'Mensalidade50%', '2025-07-25', 20.40),
 
 -- Kevin Ferreira (5 disciplinas)
@@ -606,7 +606,7 @@ VALUES
 ('Kevin', 'Ferreira', '(11) 98765-4401', 'HIST101-1', '2025-02-02', FALSE, FALSE, TRUE, FALSE, 6.6, NULL, 'Transporte', '2025-02-15', 39.75),
 ('Kevin', 'Ferreira', '(11) 98765-4401', 'ING101-1', '2025-02-02', FALSE, FALSE, FALSE, TRUE, 4.4, NULL, 'Transporte', '2025-02-15', 21.40),
 ('Kevin', 'Ferreira', '(11) 98765-4401', 'SOC101-1', '2025-07-15', FALSE, FALSE, TRUE, FALSE, 5.6, NULL, 'Transporte', '2025-07-25', 78.95),
-('Kevin', 'Fereira', '(11) 98765-4401', 'EDF101-1', '2025-07-15', FALSE, FALSE, TRUE, FALSE, 6.4, NULL, 'Transporte', '2025-07-25', 25.65),
+('Kevin', 'Ferreira', '(11) 98765-4401', 'EDF101-1', '2025-07-15', FALSE, FALSE, TRUE, FALSE, 6.4, NULL, 'Transporte', '2025-07-25', 25.65),
 
 -- Larissa Gonçalves (5 disciplinas)
 ('Larissa', 'Gonçalves', '(11) 98765-4402', 'QUI101-1', '2025-02-02', FALSE, FALSE, TRUE, FALSE, 8.2, 'Pesquisa', 'RU', '2025-02-15', 48.50),
@@ -1127,3 +1127,41 @@ INSERT INTO Avaliar (CodigoDisc, NomeAluno, SobrenomeAluno, TelefoneAluno, NomeP
 ('EDF101-1', 'Bruno', 'Oliveira', '(11) 98765-4322', 'Zacarias', 'Rocha', '(11) 98765-4344', 5, 4, 5, 4),
 ('ROB301-1', 'Daniel', 'Costa', '(11) 98765-4324', 'Thales', 'Ximenes', '(11) 98765-4389', 4, 5, 5, 5),
 ('BIOM301-1', 'Henrique', 'Rodrigues', '(11) 98765-4328', 'Olívia', 'Santana', '(11) 98765-4384', 5, 5, 4, 4);
+
+INSERT INTO Associar (Cidade, Estado, Pais, Predio, NomeFuncionario, SobrenomeFuncionario, TelefoneFuncionario, NomeAluno, SobrenomeAluno, TelefoneAluno, NomeProf, SobrenomeProf, TelefoneProf, CodigoDisc, CodigoCurso)
+VALUES
+-- Unidade: São Paulo, Prédio Acadêmico I (Foco em Exatas e Humanidades)
+('São Paulo', 'SP', 'Brasil', 'Prédio Acadêmico I', 'Beto', 'Silveira', '(11) 98765-4346', 'Ana', 'Silva', '(11) 98765-4321', 'Ricardo', 'Mendes', '(11) 98765-4336', 'MAT101-1', 'MAT-101'),
+('São Paulo', 'SP', 'Brasil', 'Prédio Acadêmico I', 'Beto', 'Silveira', '(11) 98765-4346', 'Eduarda', 'Martins', '(11) 98765-4325', 'Dante', 'Cavalcanti', '(11) 98765-4353', 'MAT101-2', 'MAT-101'),
+('São Paulo', 'SP', 'Brasil', 'Prédio Acadêmico I', 'Juliana', 'Dantas', '(11) 98765-4369', 'Marcos', 'Souza', '(11) 98765-4332', 'Norberto', 'Ramos', '(11) 98765-4383', 'MATF201-1', 'MATF-201'),
+('São Paulo', 'SP', 'Brasil', 'Prédio Acadêmico I', 'Igor', 'Castro', '(11) 98765-4368', 'Sofia', 'Nascimento', '(11) 98765-4362', 'Bernardo', 'Andrade', '(11) 98765-4351', 'FIL101-1', 'FIL-101'),
+
+-- Unidade: São Paulo, Prédio de Laboratórios (Foco em Ciências)
+('São Paulo', 'SP', 'Brasil', 'Prédio de Laboratórios', 'Cecília', 'Uchoa', '(11) 98765-4347', 'Carla', 'Santos', '(11) 98765-4323', 'Úrsula', 'Campos', '(11) 98765-4339', 'QUI101-1', 'QUI-101'),
+('São Paulo', 'SP', 'Brasil', 'Prédio de Laboratórios', 'Dário', 'Valente', '(11) 98765-4348', 'Felipe', 'Pereira', '(11) 98765-4326', 'Tiago', 'Nunes', '(11) 98765-4338', 'FIS101-1', 'FIS-101'),
+('São Paulo', 'SP', 'Brasil', 'Prédio de Laboratórios', 'Mariana', 'Fagundes', '(11) 98765-4371', 'Daniel', 'Costa', '(11) 98765-4324', 'Olívia', 'Santana', '(11) 98765-4384', 'BIOM301-1', 'BIOM-301'),
+
+-- Unidade: Rio de Janeiro, Campus Praia Vermelha (Foco em Humanidades e Linguagens)
+('Rio de Janeiro', 'RJ', 'Brasil', 'Campus Praia Vermelha', 'Elaine', 'Xavier', '(11) 98765-4349', 'Bruno', 'Oliveira', '(11) 98765-4322', 'Vitor', 'Duarte', '(11) 98765-4340', 'HIST101-1', 'HIST-101'),
+('Rio de Janeiro', 'RJ', 'Brasil', 'Campus Praia Vermelha', 'Fabio', 'Zimmermann', '(11) 98765-4350', 'Gabriela', 'Almeida', '(11) 98765-4327', 'Clarice', 'Borges', '(11) 98765-4352', 'SOC101-1', 'SOC-101'),
+('Rio de Janeiro', 'RJ', 'Brasil', 'Campus Praia Vermelha', 'Nelson', 'Guedes', '(11) 98765-4372', 'João', 'Gomes', '(11) 98765-4330', 'Sandra', 'Vieira', '(11) 98765-4337', 'PORT101-1', 'PORT-101'),
+
+-- Unidade: Belo Horizonte, Bloco A
+('Belo Horizonte', 'MG', 'Brasil', 'Bloco A', 'Helena', 'Barros', '(11) 98765-4367', 'Larissa', 'Lima', '(11) 98765-4331', 'Alice', 'Teixeira', '(11) 98765-4345', 'ING101-1', 'ING-101'),
+('Belo Horizonte', 'MG', 'Brasil', 'Bloco A', 'Olívia', 'Horta', '(11) 98765-4373', 'Patrícia', 'Cardoso', '(11) 98765-4335', 'Elisa', 'Dias', '(11) 98765-4354', 'LIT101-1', 'LIT-101'),
+
+-- Unidade: Lisboa, Portugal
+('Lisboa', 'Lisboa', 'Portugal', 'Edifício Marquês de Pombal', 'Paulo', 'Ibrahim', '(11) 98765-4374', 'Henrique', 'Rodrigues', '(11) 98765-4328', 'Yara', 'Queiroz', '(11) 98765-4343', 'ART101-1', 'ART-101'),
+('Lisboa', 'Lisboa', 'Portugal', 'Edifício Marquês de Pombal', 'Queila', 'Jardim', '(11) 98765-4375', 'Caio', 'Xavier', '(11) 98765-4393', 'Giovanna', 'Fontes', '(11) 98765-4356', 'ESP101-1', 'ESP-101'),
+
+-- Unidade: Nova York, Estados Unidos
+('Nova York', 'NY', 'Estados Unidos', 'Manhattan Campus', 'Roberto', 'Klein', '(11) 98765-4376', 'Isabela', 'Ferreira', '(11) 98765-4329', 'Thales', 'Ximenes', '(11) 98765-4389', 'ROB301-1', 'ROB-301'),
+('Nova York', 'NY', 'Estados Unidos', 'Manhattan Campus', 'Simone', 'Lopes', '(11) 98765-4377', 'Beatriz', 'Werner', '(11) 98765-4392', 'Luiz', 'Pereira', '(11) 98765-4381', 'ROB301-1', 'ROB-301'), -- Mesmo curso, prof e disc, mas aluno e func diferentes
+
+-- Unidade: Tóquio, Japão
+('Tóquio', 'Tóquio', 'Japão', 'Sakura Hall', 'Túlio', 'Marques', '(11) 98765-4378', 'Daniela', 'Yamamoto', '(11) 98765-4394', 'Karina', 'Jesus', '(11) 98765-4360', 'PSI101-1', 'PSI-101'),
+('Tóquio', 'Tóquio', 'Japão', 'Sakura Hall', 'Úrsula', 'Nobre', '(11) 98765-4379', 'Erick', 'Zamboni', '(11) 98765-4395', 'Sueli', 'Werneck', '(11) 98765-4388', 'PSI101-1', 'PSI-101'), -- Mesmo curso e disc
+
+-- Unidade: Curitiba, PR
+('Curitiba', 'PR', 'Brasil', 'Torre do Conhecimento', 'Valter', 'Oliveira', '(11) 98765-4380', 'Otávio', 'Ribeiro', '(11) 98765-4334', 'Zacarias', 'Rocha', '(11) 98765-4344', 'EDF101-1', 'EDF-101'),
+('Curitiba', 'PR', 'Brasil', 'Torre do Conhecimento', 'Gustavo', 'Araújo', '(11) 98765-4366', 'Natália', 'Barbosa', '(11) 98765-4333', 'Ivana', 'Holanda', '(11) 98765-4358', 'ARTD201-1', 'ARTD-201');
