@@ -5,7 +5,7 @@
 -- Rafael Brazolin Alves Mansur 14604030
 
 -- Criando a base de dados
-CREATE DATABASE tidia
+CREATE DATABASE escola
     WITH
     OWNER = postgres
     ENCODING = 'UTF8'
@@ -165,34 +165,6 @@ CREATE TABLE UnidadeEscola (
     PRIMARY KEY (Cidade, Estado, Pais, Predio)
 );
 
--- Exemplo para tabela Associar (com 5 tuplas)
-CREATE TABLE Associar (
-    Cidade VARCHAR(50),
-    Estado VARCHAR(50),
-    Pais VARCHAR(50),
-    Predio VARCHAR(50),
-    NomeFuncionario VARCHAR(50),
-    SobrenomeFuncionario VARCHAR(50),
-    TelefoneFuncionario VARCHAR(20),
-    NomeAluno VARCHAR(50),
-    SobrenomeAluno VARCHAR(50),
-    TelefoneAluno VARCHAR(20),
-    NomeProf VARCHAR(50),
-    SobrenomeProf VARCHAR(50),
-    TelefoneProf VARCHAR(20),
-    CodigoDisc VARCHAR(10),
-    CodigoCurso VARCHAR(10),
-    PRIMARY KEY (Cidade, Estado, Pais, Predio,NomeFuncionario, SobrenomeFuncionario, TelefoneFuncionario, 
-                NomeAluno, SobrenomeAluno, TelefoneAluno, 
-                NomeProf, SobrenomeProf, TelefoneProf, 
-                CodigoDisc, CodigoCurso),
-    FOREIGN KEY (CodigoDisc) REFERENCES Disciplina(Codigo),
-    FOREIGN KEY (NomeProf, SobrenomeProf, TelefoneProf) REFERENCES Professor(Nome, Sobrenome, Telefone),
-    FOREIGN KEY (CodigoCurso) REFERENCES Curso(Codigo),
-    FOREIGN KEY (NomeAluno, SobrenomeAluno, TelefoneAluno) REFERENCES Aluno(Nome, Sobrenome, Telefone),
-    FOREIGN KEY (NomeFuncionario, SobrenomeFuncionario, TelefoneFuncionario) REFERENCES Funcionario(Nome, Sobrenome, Telefone)
-);
-
 -- Tabela Regras
 CREATE TABLE Regras (
     Regra VARCHAR(100) PRIMARY KEY
@@ -273,4 +245,61 @@ CREATE TABLE Avaliar (
     FOREIGN KEY (CodigoDisc) REFERENCES Disciplina(Codigo),
     FOREIGN KEY (NomeAluno, SobrenomeAluno, TelefoneAluno) REFERENCES Aluno(Nome, Sobrenome, Telefone),
      FOREIGN KEY (NomeProf, SobrenomeProf, TelefoneProf) REFERENCES Professor(Nome, Sobrenome, Telefone)
+);
+
+
+CREATE TABLE AssociarFuncionario (
+    Cidade VARCHAR(50),
+    Estado VARCHAR(50),
+    Pais VARCHAR(50),
+    Predio VARCHAR(50),
+    NomeFuncionario VARCHAR(50),
+    SobrenomeFuncionario VARCHAR(50),
+    TelefoneFuncionario VARCHAR(20),
+    FOREIGN KEY (NomeFuncionario, SobrenomeFuncionario, TelefoneFuncionario) REFERENCES Funcionario(Nome, Sobrenome, Telefone),
+    PRIMARY KEY (Cidade, Estado, Pais, Predio, NomeFuncionario, SobrenomeFuncionario, TelefoneFuncionario)
+);
+
+CREATE TABLE AssociarAluno (
+    Cidade VARCHAR(50),
+    Estado VARCHAR(50),
+    Pais VARCHAR(50),
+    Predio VARCHAR(50),
+    NomeAluno VARCHAR(50),
+    SobrenomeAluno VARCHAR(50),
+    TelefoneAluno VARCHAR(20),
+    FOREIGN KEY (NomeAluno, SobrenomeAluno, TelefoneAluno) REFERENCES Aluno(Nome, Sobrenome, Telefone),
+    PRIMARY KEY(Cidade, Estado, Pais, Predio,NomeAluno,SobrenomeAluno,TelefoneAluno)
+);
+
+CREATE TABLE AssociarProfessor (
+    Cidade VARCHAR(50),
+    Estado VARCHAR(50),
+    Pais VARCHAR(50),
+    Predio VARCHAR(50),
+    NomeProf VARCHAR(50),
+    SobrenomeProf VARCHAR(50),
+    TelefoneProf VARCHAR(20),
+    FOREIGN KEY (NomeProf, SobrenomeProf, TelefoneProf) REFERENCES Professor(Nome, Sobrenome, Telefone),
+    PRIMARY KEY (Cidade, Estado, Pais, Predio,NomeProf,SobrenomeProf,TelefoneProf)
+);
+
+CREATE TABLE AssociarDisciplinas (
+    Cidade VARCHAR(50),
+    Estado VARCHAR(50),
+    Pais VARCHAR(50),
+    Predio VARCHAR(50),
+    CodigoDisc VARCHAR(10),
+    FOREIGN KEY (CodigoDisc) REFERENCES Disciplina(Codigo),
+    PRIMARY KEY (Cidade, Estado, Pais, Predio, CodigoDisc)
+);
+
+CREATE TABLE AssociarCurso (
+    Cidade VARCHAR(50),
+    Estado VARCHAR(50),
+    Pais VARCHAR(50),
+    Predio VARCHAR(50),
+    CodigoCurso VARCHAR(10),
+    FOREIGN KEY (CodigoCurso) REFERENCES Curso(Codigo),
+    PRIMARY KEY (Cidade, Estado, Pais, Predio, CodigoCurso)
 );

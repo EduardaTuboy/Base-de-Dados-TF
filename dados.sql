@@ -1128,40 +1128,128 @@ INSERT INTO Avaliar (CodigoDisc, NomeAluno, SobrenomeAluno, TelefoneAluno, NomeP
 ('ROB301-1', 'Daniel', 'Costa', '(11) 98765-4324', 'Thales', 'Ximenes', '(11) 98765-4389', 4, 5, 5, 5),
 ('BIOM301-1', 'Henrique', 'Rodrigues', '(11) 98765-4328', 'Olívia', 'Santana', '(11) 98765-4384', 5, 5, 4, 4);
 
-INSERT INTO Associar (Cidade, Estado, Pais, Predio, NomeFuncionario, SobrenomeFuncionario, TelefoneFuncionario, NomeAluno, SobrenomeAluno, TelefoneAluno, NomeProf, SobrenomeProf, TelefoneProf, CodigoDisc, CodigoCurso)
+INSERT INTO AssociarFuncionario (Cidade, Estado, Pais, Predio, NomeFuncionario, SobrenomeFuncionario, TelefoneFuncionario)
 VALUES
--- Unidade: São Paulo, Prédio Acadêmico I (Foco em Exatas e Humanidades)
-('São Paulo', 'SP', 'Brasil', 'Prédio Acadêmico I', 'Beto', 'Silveira', '(11) 98765-4346', 'Ana', 'Silva', '(11) 98765-4321', 'Ricardo', 'Mendes', '(11) 98765-4336', 'MAT101-1', 'MAT-101'),
-('São Paulo', 'SP', 'Brasil', 'Prédio Acadêmico I', 'Beto', 'Silveira', '(11) 98765-4346', 'Eduarda', 'Martins', '(11) 98765-4325', 'Dante', 'Cavalcanti', '(11) 98765-4353', 'MAT101-2', 'MAT-101'),
-('São Paulo', 'SP', 'Brasil', 'Prédio Acadêmico I', 'Juliana', 'Dantas', '(11) 98765-4369', 'Marcos', 'Souza', '(11) 98765-4332', 'Norberto', 'Ramos', '(11) 98765-4383', 'MATF201-1', 'MATF-201'),
-('São Paulo', 'SP', 'Brasil', 'Prédio Acadêmico I', 'Igor', 'Castro', '(11) 98765-4368', 'Sofia', 'Nascimento', '(11) 98765-4362', 'Bernardo', 'Andrade', '(11) 98765-4351', 'FIL101-1', 'FIL-101'),
+-- Brasil (12 unidades)
+('São Paulo', 'SP', 'Brasil', 'Prédio Acadêmico I', 'Beto', 'Silveira', '(11) 98765-4346'),
+('São Paulo', 'SP', 'Brasil', 'Prédio de Laboratórios', 'Cecília', 'Uchoa', '(11) 98765-4347'),
+('Rio de Janeiro', 'RJ', 'Brasil', 'Campus Praia Vermelha', 'Dário', 'Valente', '(11) 98765-4348'),
+('Rio de Janeiro', 'RJ', 'Brasil', 'Prédio Histórico', 'Elaine', 'Xavier', '(11) 98765-4349'),
+('Belo Horizonte', 'MG', 'Brasil', 'Bloco A', 'Fabio', 'Zimmermann', '(11) 98765-4350'),
+('Belo Horizonte', 'MG', 'Brasil', 'Bloco B', 'Gustavo', 'Araújo', '(11) 98765-4366'),
+('Porto Alegre', 'RS', 'Brasil', 'Prédio Central', 'Helena', 'Barros', '(11) 98765-4367'),
+('Curitiba', 'PR', 'Brasil', 'Torre do Conhecimento', 'Igor', 'Castro', '(11) 98765-4368'),
+('Salvador', 'BA', 'Brasil', 'Prédio Cultural', 'Juliana', 'Dantas', '(11) 98765-4369'),
+('Recife', 'PE', 'Brasil', 'Campus Recife Antigo', 'Leonardo', 'Espinosa', '(11) 98765-4370'),
+('Brasília', 'DF', 'Brasil', 'Asa Norte', 'Mariana', 'Fagundes', '(11) 98765-4371'),
+('Fortaleza', 'CE', 'Brasil', 'Prédio Litorâneo', 'Nelson', 'Guedes', '(11) 98765-4372'),
 
--- Unidade: São Paulo, Prédio de Laboratórios (Foco em Ciências)
-('São Paulo', 'SP', 'Brasil', 'Prédio de Laboratórios', 'Cecília', 'Uchoa', '(11) 98765-4347', 'Carla', 'Santos', '(11) 98765-4323', 'Úrsula', 'Campos', '(11) 98765-4339', 'QUI101-1', 'QUI-101'),
-('São Paulo', 'SP', 'Brasil', 'Prédio de Laboratórios', 'Dário', 'Valente', '(11) 98765-4348', 'Felipe', 'Pereira', '(11) 98765-4326', 'Tiago', 'Nunes', '(11) 98765-4338', 'FIS101-1', 'FIS-101'),
-('São Paulo', 'SP', 'Brasil', 'Prédio de Laboratórios', 'Mariana', 'Fagundes', '(11) 98765-4371', 'Daniel', 'Costa', '(11) 98765-4324', 'Olívia', 'Santana', '(11) 98765-4384', 'BIOM301-1', 'BIOM-301'),
+-- Portugal (3 unidades)
+('Lisboa', 'Lisboa', 'Portugal', 'Edifício Marquês de Pombal', 'Olívia', 'Horta', '(11) 98765-4373'),
+('Porto', 'Porto', 'Portugal', 'Campus Ribeira', 'Paulo', 'Ibrahim', '(11) 98765-4374'),
+('Coimbra', 'Coimbra', 'Portugal', 'Prédio Universitário', 'Queila', 'Jardim', '(11) 98765-4375'),
 
--- Unidade: Rio de Janeiro, Campus Praia Vermelha (Foco em Humanidades e Linguagens)
-('Rio de Janeiro', 'RJ', 'Brasil', 'Campus Praia Vermelha', 'Elaine', 'Xavier', '(11) 98765-4349', 'Bruno', 'Oliveira', '(11) 98765-4322', 'Vitor', 'Duarte', '(11) 98765-4340', 'HIST101-1', 'HIST-101'),
-('Rio de Janeiro', 'RJ', 'Brasil', 'Campus Praia Vermelha', 'Fabio', 'Zimmermann', '(11) 98765-4350', 'Gabriela', 'Almeida', '(11) 98765-4327', 'Clarice', 'Borges', '(11) 98765-4352', 'SOC101-1', 'SOC-101'),
-('Rio de Janeiro', 'RJ', 'Brasil', 'Campus Praia Vermelha', 'Nelson', 'Guedes', '(11) 98765-4372', 'João', 'Gomes', '(11) 98765-4330', 'Sandra', 'Vieira', '(11) 98765-4337', 'PORT101-1', 'PORT-101'),
+-- Estados Unidos (3 unidades)
+('Nova York', 'NY', 'Estados Unidos', 'Manhattan Campus', 'Roberto', 'Klein', '(11) 98765-4376'),
+('Boston', 'MA', 'Estados Unidos', 'Harvard Annex', 'Simone', 'Lopes', '(11) 98765-4377'),
+('Los Angeles', 'CA', 'Estados Unidos', 'Sunset Tower', 'Túlio', 'Marques', '(11) 98765-4378'),
 
--- Unidade: Belo Horizonte, Bloco A
-('Belo Horizonte', 'MG', 'Brasil', 'Bloco A', 'Helena', 'Barros', '(11) 98765-4367', 'Larissa', 'Lima', '(11) 98765-4331', 'Alice', 'Teixeira', '(11) 98765-4345', 'ING101-1', 'ING-101'),
-('Belo Horizonte', 'MG', 'Brasil', 'Bloco A', 'Olívia', 'Horta', '(11) 98765-4373', 'Patrícia', 'Cardoso', '(11) 98765-4335', 'Elisa', 'Dias', '(11) 98765-4354', 'LIT101-1', 'LIT-101'),
+-- Outros países (2 unidades)
+('Toronto', 'Ontário', 'Canadá', 'Maple Leaf Building', 'Úrsula', 'Nobre', '(11) 98765-4379'),
+('Tóquio', 'Tóquio', 'Japão', 'Sakura Hall', 'Valter', 'Oliveira', '(11) 98765-4380');
 
--- Unidade: Lisboa, Portugal
-('Lisboa', 'Lisboa', 'Portugal', 'Edifício Marquês de Pombal', 'Paulo', 'Ibrahim', '(11) 98765-4374', 'Henrique', 'Rodrigues', '(11) 98765-4328', 'Yara', 'Queiroz', '(11) 98765-4343', 'ART101-1', 'ART-101'),
-('Lisboa', 'Lisboa', 'Portugal', 'Edifício Marquês de Pombal', 'Queila', 'Jardim', '(11) 98765-4375', 'Caio', 'Xavier', '(11) 98765-4393', 'Giovanna', 'Fontes', '(11) 98765-4356', 'ESP101-1', 'ESP-101'),
+INSERT INTO AssociarAluno (Cidade, Estado, Pais, Predio, NomeAluno, SobrenomeAluno, TelefoneAluno)
+VALUES
+-- Cada unidade recebe 2 alunos (40 alunos / 20 unidades = 2 por unidade)
 
--- Unidade: Nova York, Estados Unidos
-('Nova York', 'NY', 'Estados Unidos', 'Manhattan Campus', 'Roberto', 'Klein', '(11) 98765-4376', 'Isabela', 'Ferreira', '(11) 98765-4329', 'Thales', 'Ximenes', '(11) 98765-4389', 'ROB301-1', 'ROB-301'),
-('Nova York', 'NY', 'Estados Unidos', 'Manhattan Campus', 'Simone', 'Lopes', '(11) 98765-4377', 'Beatriz', 'Werner', '(11) 98765-4392', 'Luiz', 'Pereira', '(11) 98765-4381', 'ROB301-1', 'ROB-301'), -- Mesmo curso, prof e disc, mas aluno e func diferentes
+-- Brasil (12 unidades)
+('São Paulo', 'SP', 'Brasil', 'Prédio Acadêmico I', 'Ana', 'Silva', '(11) 98765-4321'),
+('São Paulo', 'SP', 'Brasil', 'Prédio Acadêmico I', 'Bruno', 'Oliveira', '(11) 98765-4322'),
+('São Paulo', 'SP', 'Brasil', 'Prédio de Laboratórios', 'Carla', 'Santos', '(11) 98765-4323'),
+('São Paulo', 'SP', 'Brasil', 'Prédio de Laboratórios', 'Daniel', 'Costa', '(11) 98765-4324'),
+('Rio de Janeiro', 'RJ', 'Brasil', 'Campus Praia Vermelha', 'Eduarda', 'Martins', '(11) 98765-4325'),
+('Rio de Janeiro', 'RJ', 'Brasil', 'Campus Praia Vermelha', 'Felipe', 'Pereira', '(11) 98765-4326'),
+('Rio de Janeiro', 'RJ', 'Brasil', 'Prédio Histórico', 'Gabriela', 'Almeida', '(11) 98765-4327'),
+('Rio de Janeiro', 'RJ', 'Brasil', 'Prédio Histórico', 'Henrique', 'Rodrigues', '(11) 98765-4328'),
+('Belo Horizonte', 'MG', 'Brasil', 'Bloco A', 'Isabela', 'Ferreira', '(11) 98765-4329'),
+('Belo Horizonte', 'MG', 'Brasil', 'Bloco A', 'João', 'Gomes', '(11) 98765-4330'),
+('Belo Horizonte', 'MG', 'Brasil', 'Bloco B', 'Larissa', 'Lima', '(11) 98765-4331'),
+('Belo Horizonte', 'MG', 'Brasil', 'Bloco B', 'Marcos', 'Souza', '(11) 98765-4332'),
+('Porto Alegre', 'RS', 'Brasil', 'Prédio Central', 'Natália', 'Barbosa', '(11) 98765-4333'),
+('Porto Alegre', 'RS', 'Brasil', 'Prédio Central', 'Otávio', 'Ribeiro', '(11) 98765-4334'),
+('Curitiba', 'PR', 'Brasil', 'Torre do Conhecimento', 'Patrícia', 'Cardoso', '(11) 98765-4335'),
+('Curitiba', 'PR', 'Brasil', 'Torre do Conhecimento', 'Rafael', 'Moraes', '(11) 98765-4361'),
+('Salvador', 'BA', 'Brasil', 'Prédio Cultural', 'Sofia', 'Nascimento', '(11) 98765-4362'),
+('Salvador', 'BA', 'Brasil', 'Prédio Cultural', 'Thiago', 'Ornellas', '(11) 98765-4363'),
+('Recife', 'PE', 'Brasil', 'Campus Recife Antigo', 'Vanessa', 'Prado', '(11) 98765-4364'),
+('Recife', 'PE', 'Brasil', 'Campus Recife Antigo', 'William', 'Queiroz', '(11) 98765-4365'),
+('Brasília', 'DF', 'Brasil', 'Asa Norte', 'Arthur', 'Vasconcelos', '(11) 98765-4391'),
+('Brasília', 'DF', 'Brasil', 'Asa Norte', 'Beatriz', 'Werner', '(11) 98765-4392'),
+('Fortaleza', 'CE', 'Brasil', 'Prédio Litorâneo', 'Caio', 'Xavier', '(11) 98765-4393'),
+('Fortaleza', 'CE', 'Brasil', 'Prédio Litorâneo', 'Daniela', 'Yamamoto', '(11) 98765-4394'),
 
--- Unidade: Tóquio, Japão
-('Tóquio', 'Tóquio', 'Japão', 'Sakura Hall', 'Túlio', 'Marques', '(11) 98765-4378', 'Daniela', 'Yamamoto', '(11) 98765-4394', 'Karina', 'Jesus', '(11) 98765-4360', 'PSI101-1', 'PSI-101'),
-('Tóquio', 'Tóquio', 'Japão', 'Sakura Hall', 'Úrsula', 'Nobre', '(11) 98765-4379', 'Erick', 'Zamboni', '(11) 98765-4395', 'Sueli', 'Werneck', '(11) 98765-4388', 'PSI101-1', 'PSI-101'), -- Mesmo curso e disc
+-- Portugal (3 unidades)
+('Lisboa', 'Lisboa', 'Portugal', 'Edifício Marquês de Pombal', 'Erick', 'Zamboni', '(11) 98765-4395'),
+('Lisboa', 'Lisboa', 'Portugal', 'Edifício Marquês de Pombal', 'Fernanda', 'Albuquerque', '(11) 98765-4396'),
+('Porto', 'Porto', 'Portugal', 'Campus Ribeira', 'Gustavo', 'Bittencourt', '(11) 98765-4397'),
+('Porto', 'Porto', 'Portugal', 'Campus Ribeira', 'Heloísa', 'Coutinho', '(11) 98765-4398'),
+('Coimbra', 'Coimbra', 'Portugal', 'Prédio Universitário', 'Igor', 'Dorneles', '(11) 98765-4399'),
+('Coimbra', 'Coimbra', 'Portugal', 'Prédio Universitário', 'Juliana', 'Espíndola', '(11) 98765-4400'),
 
--- Unidade: Curitiba, PR
-('Curitiba', 'PR', 'Brasil', 'Torre do Conhecimento', 'Valter', 'Oliveira', '(11) 98765-4380', 'Otávio', 'Ribeiro', '(11) 98765-4334', 'Zacarias', 'Rocha', '(11) 98765-4344', 'EDF101-1', 'EDF-101'),
-('Curitiba', 'PR', 'Brasil', 'Torre do Conhecimento', 'Gustavo', 'Araújo', '(11) 98765-4366', 'Natália', 'Barbosa', '(11) 98765-4333', 'Ivana', 'Holanda', '(11) 98765-4358', 'ARTD201-1', 'ARTD-201');
+-- Estados Unidos (3 unidades)
+('Nova York', 'NY', 'Estados Unidos', 'Manhattan Campus', 'Kevin', 'Ferreira', '(11) 98765-4401'),
+('Nova York', 'NY', 'Estados Unidos', 'Manhattan Campus', 'Larissa', 'Gonçalves', '(11) 98765-4402'),
+('Boston', 'MA', 'Estados Unidos', 'Harvard Annex', 'Mateus', 'Henrique', '(11) 98765-4403'),
+('Boston', 'MA', 'Estados Unidos', 'Harvard Annex', 'Nina', 'Ibrahim', '(11) 98765-4404'),
+('Los Angeles', 'CA', 'Estados Unidos', 'Sunset Tower', 'Otto', 'Junqueira', '(11) 98765-4405'),
+('Los Angeles', 'CA', 'Estados Unidos', 'Sunset Tower', 'Paula', 'Klein', '(11) 98765-4406'),
+
+-- Outros países (2 unidades)
+('Toronto', 'Ontário', 'Canadá', 'Maple Leaf Building', 'Rafaela', 'Lemos', '(11) 98765-4407'),
+('Toronto', 'Ontário', 'Canadá', 'Maple Leaf Building', 'Samuel', 'Moura', '(11) 98765-4408'),
+('Tóquio', 'Tóquio', 'Japão', 'Sakura Hall', 'Tatiane', 'Nogueira', '(11) 98765-4409'),
+('Tóquio', 'Tóquio', 'Japão', 'Sakura Hall', 'Vinícius', 'Oliveira', '(11) 98765-4410');
+
+INSERT INTO AssociarProfessor (Cidade, Estado, Pais, Predio, NomeProf, SobrenomeProf, TelefoneProf)
+VALUES
+-- Cada unidade recebe pelo menos 1 professor (20 associações)
+-- Brasil (12 unidades)
+('São Paulo', 'SP', 'Brasil', 'Prédio Acadêmico I', 'Ricardo', 'Mendes', '(11) 98765-4336'),
+('São Paulo', 'SP', 'Brasil', 'Prédio de Laboratórios', 'Sandra', 'Vieira', '(11) 98765-4337'),
+('Rio de Janeiro', 'RJ', 'Brasil', 'Campus Praia Vermelha', 'Tiago', 'Nunes', '(11) 98765-4338'),
+('Rio de Janeiro', 'RJ', 'Brasil', 'Prédio Histórico', 'Úrsula', 'Campos', '(11) 98765-4339'),
+('Belo Horizonte', 'MG', 'Brasil', 'Bloco A', 'Vitor', 'Duarte', '(11) 98765-4340'),
+('Belo Horizonte', 'MG', 'Brasil', 'Bloco B', 'Wanessa', 'Oliveira', '(11) 98765-4341'),
+('Porto Alegre', 'RS', 'Brasil', 'Prédio Central', 'Xavier', 'Pinto', '(11) 98765-4342'),
+('Curitiba', 'PR', 'Brasil', 'Torre do Conhecimento', 'Yara', 'Queiroz', '(11) 98765-4343'),
+('Salvador', 'BA', 'Brasil', 'Prédio Cultural', 'Zacarias', 'Rocha', '(11) 98765-4344'),
+('Recife', 'PE', 'Brasil', 'Campus Recife Antigo', 'Alice', 'Teixeira', '(11) 98765-4345'),
+('Brasília', 'DF', 'Brasil', 'Asa Norte', 'Bernardo', 'Andrade', '(11) 98765-4351'),
+('Fortaleza', 'CE', 'Brasil', 'Prédio Litorâneo', 'Clarice', 'Borges', '(11) 98765-4352'),
+
+-- Portugal (3 unidades)
+('Lisboa', 'Lisboa', 'Portugal', 'Edifício Marquês de Pombal', 'Dante', 'Cavalcanti', '(11) 98765-4353'),
+('Porto', 'Porto', 'Portugal', 'Campus Ribeira', 'Elisa', 'Dias', '(11) 98765-4354'),
+('Coimbra', 'Coimbra', 'Portugal', 'Prédio Universitário', 'Fernando', 'Esteves', '(11) 98765-4355'),
+
+-- Estados Unidos (3 unidades)
+('Nova York', 'NY', 'Estados Unidos', 'Manhattan Campus', 'Giovanna', 'Fontes', '(11) 98765-4356'),
+('Boston', 'MA', 'Estados Unidos', 'Harvard Annex', 'Heitor', 'Guerra', '(11) 98765-4357'),
+('Los Angeles', 'CA', 'Estados Unidos', 'Sunset Tower', 'Ivana', 'Holanda', '(11) 98765-4358'),
+
+-- Outros países (2 unidades)
+('Toronto', 'Ontário', 'Canadá', 'Maple Leaf Building', 'Julio', 'Ivo', '(11) 98765-4359'),
+('Tóquio', 'Tóquio', 'Japão', 'Sakura Hall', 'Karina', 'Jesus', '(11) 98765-4360'),
+
+-- As 10 unidades seguintes recebem um segundo professor
+-- Brasil (8 unidades) + Portugal (2 unidades) = 10 unidades extras
+('São Paulo', 'SP', 'Brasil', 'Prédio Acadêmico I', 'Luiz', 'Pereira', '(11) 98765-4381'),
+('São Paulo', 'SP', 'Brasil', 'Prédio de Laboratórios', 'Márcia', 'Quintana', '(11) 98765-4382'),
+('Rio de Janeiro', 'RJ', 'Brasil', 'Campus Praia Vermelha', 'Norberto', 'Ramos', '(11) 98765-4383'),
+('Rio de Janeiro', 'RJ', 'Brasil', 'Prédio Histórico', 'Olívia', 'Santana', '(11) 98765-4384'),
+('Belo Horizonte', 'MG', 'Brasil', 'Bloco A', 'Pedro', 'Teixeira', '(11) 98765-4385'),
+('Belo Horizonte', 'MG', 'Brasil', 'Bloco B', 'Quésia', 'Ulhoa', '(11) 98765-4386'),
+('Porto Alegre', 'RS', 'Brasil', 'Prédio Central', 'Rogério', 'Vasconcelos', '(11) 98765-4387'),
+('Curitiba', 'PR', 'Brasil', 'Torre do Conhecimento', 'Sueli', 'Werneck', '(11) 98765-4388'),
+('Lisboa', 'Lisboa', 'Portugal', 'Edifício Marquês de Pombal', 'Thales', 'Ximenes', '(11) 98765-4389'),
+('Porto', 'Porto', 'Portugal', 'Campus Ribeira', 'Úrsula', 'Yamada', '(11) 98765-4390');
