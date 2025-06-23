@@ -12,6 +12,9 @@ GROUP BY
 ORDER BY 
     QuantidadeCursos DESC;
 
+-- Exibir as regras mais comuns
+SELECT * FROM RegrasMaisComuns;
+
 -- Alunos que concluíram mais disciplinas
 CREATE VIEW AlunosConcluidos AS
 SELECT 
@@ -31,6 +34,9 @@ GROUP BY
     a.Nome, a.Sobrenome, a.Telefone
 ORDER BY 
     DisciplinasConcluidas DESC;
+
+-- Exibir os alunos que concluíram mais disciplinas
+SELECT * FROM AlunosConcluidos;
 
 -- Disciplinas mais comuns
 CREATE VIEW Top10Disciplinas AS
@@ -62,3 +68,6 @@ FROM
 ORDER BY 
     mc.TotalMatriculas DESC
 LIMIT 10;
+
+-- Exibir as disciplinas mais comuns
+SELECT * FROM Top10Disciplinas;
