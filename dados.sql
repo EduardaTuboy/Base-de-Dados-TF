@@ -181,28 +181,28 @@ VALUES
 ('Thales', 'Ximenes', '(11) 98765-4389', 'Robótica Educacional', 'Especialista'),
 ('Úrsula', 'Yamada', '(11) 98765-4390', 'Química Analítica', 'Doutor');
 
-INSERT INTO Funcionario (Nome, Sobrenome, Telefone)
+INSERT INTO Funcionario (Nome, Sobrenome, Telefone,Operacao)
 VALUES
-('Beto', 'Silveira', '(11) 98765-4346'),
-('Cecília', 'Uchoa', '(11) 98765-4347'),
-('Dário', 'Valente', '(11) 98765-4348'),
-('Elaine', 'Xavier', '(11) 98765-4349'),
-('Fabio', 'Zimmermann', '(11) 98765-4350'),
-('Gustavo', 'Araújo', '(11) 98765-4366'),
-('Helena', 'Barros', '(11) 98765-4367'),
-('Igor', 'Castro', '(11) 98765-4368'),
-('Juliana', 'Dantas', '(11) 98765-4369'),
-('Leonardo', 'Espinosa', '(11) 98765-4370'),
-('Mariana', 'Fagundes', '(11) 98765-4371'),
-('Nelson', 'Guedes', '(11) 98765-4372'),
-('Olívia', 'Horta', '(11) 98765-4373'),
-('Paulo', 'Ibrahim', '(11) 98765-4374'),
-('Queila', 'Jardim', '(11) 98765-4375'),
-('Roberto', 'Klein', '(11) 98765-4376'),
-('Simone', 'Lopes', '(11) 98765-4377'),
-('Túlio', 'Marques', '(11) 98765-4378'),
-('Úrsula', 'Nobre', '(11) 98765-4379'),
-('Valter', 'Oliveira', '(11) 98765-4380');
+('Beto', 'Silveira', '(11) 98765-4346', 'Secretaria'),
+('Cecília', 'Uchoa', '(11) 98765-4347','Secretaria'),
+('Dário', 'Valente', '(11) 98765-4348','Secretaria'),
+('Elaine', 'Xavier', '(11) 98765-4349','Secretaria'),
+('Fabio', 'Zimmermann', '(11) 98765-4350','Secretaria'),
+('Gustavo', 'Araújo', '(11) 98765-4366','Zelador'),
+('Helena', 'Barros', '(11) 98765-4367','Zelador'),
+('Igor', 'Castro', '(11) 98765-4368','Zelador'),
+('Juliana', 'Dantas', '(11) 98765-4369','Zelador'),
+('Leonardo', 'Espinosa', '(11) 98765-4370','Zelador'),
+('Mariana', 'Fagundes', '(11) 98765-4371','Zelador'),
+('Nelson', 'Guedes', '(11) 98765-4372','Zelador'),
+('Olívia', 'Horta', '(11) 98765-4373','Zelador'),
+('Paulo', 'Ibrahim', '(11) 98765-4374','Tecnico'),
+('Queila', 'Jardim', '(11) 98765-4375','Tecnico'),
+('Roberto', 'Klein', '(11) 98765-4376','Tecnico'),
+('Simone', 'Lopes', '(11) 98765-4377','Tecnico'),
+('Túlio', 'Marques', '(11) 98765-4378','Tecnico'),
+('Úrsula', 'Nobre', '(11) 98765-4379','Tecnico'),
+('Valter', 'Oliveira', '(11) 98765-4380','Tecnico');
 
 -- Inserção dos departamentos
 INSERT INTO Departamento (Codigo, Nome, NomeProf, SobrenomeProf, TelefoneProf, CodigoDisciplina)
