@@ -22,6 +22,10 @@ JOIN
     Matricula ma ON di.Codigo = ma.CodigoDisc
 WHERE 
     di.Codigo = 'SOC101-1'
+    
+-- Índice criado para essa SELECT:
+CREATE INDEX idx_matricula_codigodisc_nota ON Matricula(CodigoDisc, Nota);
+
 
 
 -- listar os professores de um departamento com suas respectivas disciplinas
@@ -53,6 +57,7 @@ ORDER BY
     dep.Nome, pr.Nome, di.Nome;
 
 
+
 -- encontrar cursos que não tiveram alunos matriculados em uma data
 SELECT
     c.Nome AS NomeCurso,
@@ -74,8 +79,15 @@ WHERE
     /*curso da lista completa nao esta na lista de cursos com matricula*/
     CursosComMatricula.CodigoCurso IS NULL;
 
+-- Índice para essa consulta:
+CREATE INDEX idx_matricula_compor ON Matricula (
+    DataMatric,     
+    CodigoDisc       
+) INCLUDE (
+    Ativa               
+);
 
--- todas as disciplinas que o aluno esta matriculado e sua matricula esta confirmada
+-- todas as disciplinas que o aluno esta matriculado e sua matricula esta ativa
 SELECT
     ma.NomeAluno,
     ma.SobrenomeAluno,
@@ -91,6 +103,14 @@ WHERE
     AND ma.TelefoneAluno = '(11) 98765-4391'
     AND ma.Ativa = TRUE;
 
+-- Índice criado para essa SELECT:
+CREATE INDEX idx_matricula_aluno_ativa ON Matricula (
+    NomeAluno,
+    SobrenomeAluno,
+    TelefoneAluno,
+    Ativa  
+);
+
 
 -- listar os professores chefes de cada departamento, incluindo o departamento
 SELECT
@@ -102,6 +122,7 @@ FROM
     Departamento dep
 JOIN
     Professor pr ON dep.NomeProf = pr.Nome AND dep.SobrenomeProf = pr.Sobrenome AND dep.TelefoneProf = pr.Telefone;
+
 
 -- listar os cursos que seguem determinada regra e determinada necessidade
 SELECT
@@ -117,6 +138,7 @@ WHERE
     ne.Necessidade = 'Impressora 3D para cursos de design e engenharia'
     AND ex.Regra = 'Apresentação do TCC obrigatória para conclusão do curso';
 
+
 -- listar cursos que exigem uma presença mínima especifica em aulas
 SELECT
     c.Nome AS NomeCurso,
@@ -129,6 +151,7 @@ JOIN
     Regras re ON ex.Regra = re.Regra
 WHERE
     ex.Regra = 'Frequência mínima de 60% para aprovação';
+
 
 -- listar disciplinas que compoem um curso especifico
 SELECT
