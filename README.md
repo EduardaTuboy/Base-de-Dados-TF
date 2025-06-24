@@ -16,9 +16,8 @@ Para a execução e teste dos códigos realizados para os exercícios de 6 a 8, 
 Os arquivos deste repositório estão organizados da seguinte forma, em ordem de execução:
 
 * *criacao_base.sql:* script para a criação do banco de dados *escola*.
-* *criacao_tabelas.sql:* script com os comandos CREATE TABLE para criar a estrutura do banco de dados.
+* *criacao_tabelas.sql:* script com os comandos CREATE TABLE para criar as tabelas do banco de dados.
 * *dados.sql:* script com os comandos INSERT INTO para popular as tabelas criadas com dados.
-* *dados_parte.sql:* script usado para testes durante desenvolvimento, não deve ser executado.
 * *consultas.sql:* script com os SELECTs criados para o teste do banco de dados criado no projeto.
 * *indices.sql:* script com os comandos CREATE INDEX que o grupo desenvolveu.
 * *view.sql:* script com os comandos CREATE VIEW desenvolvidos para o projeto.

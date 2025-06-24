@@ -1,4 +1,10 @@
 
+-- Membros - Grupo 5
+-- Eduarda Tuboy Nardin 13732405
+-- Gabriel Hyppolito 14571810
+-- Juan Marques Jordao 14758742
+-- Rafael Brazolin Alves Mansur 14604030
+
 -- listar todos os alunos matriculados em uma disciplina específica em um determinado período 
 SELECT
     ma.NomeAluno,
@@ -22,10 +28,6 @@ JOIN
     Matricula ma ON di.Codigo = ma.CodigoDisc
 WHERE 
     di.Codigo = 'SOC101-1'
-    
--- Índice criado para essa SELECT:
-CREATE INDEX idx_matricula_codigodisc_nota ON Matricula(CodigoDisc, Nota);
-
 
 
 -- listar os professores de um departamento com suas respectivas disciplinas
@@ -57,7 +59,6 @@ ORDER BY
     dep.Nome, pr.Nome, di.Nome;
 
 
-
 -- encontrar cursos que não tiveram alunos matriculados em uma data
 SELECT
     c.Nome AS NomeCurso,
@@ -79,13 +80,7 @@ WHERE
     /*curso da lista completa nao esta na lista de cursos com matricula*/
     CursosComMatricula.CodigoCurso IS NULL;
 
--- Índice para essa consulta:
-CREATE INDEX idx_matricula_compor ON Matricula (
-    DataMatric,     
-    CodigoDisc       
-) INCLUDE (
-    Ativa               
-);
+
 
 -- todas as disciplinas que o aluno esta matriculado e sua matricula esta ativa
 SELECT
@@ -102,14 +97,6 @@ WHERE
     AND ma.SobrenomeAluno = 'Vasconcelos'
     AND ma.TelefoneAluno = '(11) 98765-4391'
     AND ma.Ativa = TRUE;
-
--- Índice criado para essa SELECT:
-CREATE INDEX idx_matricula_aluno_ativa ON Matricula (
-    NomeAluno,
-    SobrenomeAluno,
-    TelefoneAluno,
-    Ativa  
-);
 
 
 -- listar os professores chefes de cada departamento, incluindo o departamento

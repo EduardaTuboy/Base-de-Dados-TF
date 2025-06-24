@@ -1,3 +1,9 @@
+-- Membros - Grupo 5
+-- Eduarda Tuboy Nardin 13732405
+-- Gabriel Hyppolito 14571810
+-- Juan Marques Jordao 14758742
+-- Rafael Brazolin Alves Mansur 14604030
+
 -- Inserindo usuários (alunos, professores e funcionários)
 INSERT INTO Usuario (Nome, Sobrenome, Telefone, Posicao, Data_Nasc, Endereco, Sexo, Email)
 VALUES

@@ -1,3 +1,9 @@
+-- Membros - Grupo 5
+-- Eduarda Tuboy Nardin 13732405
+-- Gabriel Hyppolito 14571810
+-- Juan Marques Jordao 14758742
+-- Rafael Brazolin Alves Mansur 14604030
+
 -- Regras mais comuns
 CREATE VIEW RegrasMaisComuns AS
 SELECT 
