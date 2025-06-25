@@ -5,19 +5,6 @@
 -- Juan Marques Jordao 14758742
 -- Rafael Brazolin Alves Mansur 14604030
 
--- listar todos os alunos matriculados em uma disciplina específica em um determinado período 
-SELECT
-    ma.NomeAluno,
-    ma.SobrenomeAluno
-FROM
-    Matricula ma
-JOIN
-    Ministracao mi ON ma.CodigoDisc = mi.CodigoDisc
-WHERE 
-    ma.CodigoDisc = 'MAT101-1' 
-    AND mi.InicioMinistracao = '2025-02-24'
-    AND mi.FimMinistracao = '2025-07-07';
-
 
 -- Nota final média dos alunos em uma disciplina concluída
 SELECT
@@ -126,18 +113,20 @@ WHERE
     AND ex.Regra = 'Apresentação do TCC obrigatória para conclusão do curso';
 
 
--- listar cursos que exigem uma presença mínima especifica em aulas
-SELECT
-    c.Nome AS NomeCurso,
-    c.Codigo AS CodigoCurso
-FROM
-    Curso c
-JOIN
-    Exigir ex ON c.Codigo = ex.CodigoCurso
-JOIN
-    Regras re ON ex.Regra = re.Regra
-WHERE
-    ex.Regra = 'Frequência mínima de 60% para aprovação';
+-- listar todas as unidades e o total de alunos, professores, funcionarios, disciplinas e cursos que ela possui
+SELECT 
+    ue.Cidade,
+    ue.Estado,
+    ue.Pais,
+    ue.Predio,
+    (SELECT COUNT(*) FROM AssociarCurso ac WHERE ac.Cidade = ue.Cidade AND ac.Estado = ue.Estado AND ac.Pais = ue.Pais AND ac.Predio = ue.Predio) AS TotalCursos,
+    (SELECT COUNT(*) FROM AssociarDisciplinas ad WHERE ad.Cidade = ue.Cidade AND ad.Estado = ue.Estado AND ad.Pais = ue.Pais AND ad.Predio = ue.Predio) AS TotalDisciplinas,
+    (SELECT COUNT(*) FROM AssociarAluno aa WHERE aa.Cidade = ue.Cidade AND aa.Estado = ue.Estado AND aa.Pais = ue.Pais AND aa.Predio = ue.Predio) AS TotalAlunos,
+    (SELECT COUNT(*) FROM AssociarFuncionario af WHERE af.Cidade = ue.Cidade AND af.Estado = ue.Estado AND af.Pais = ue.Pais AND af.Predio = ue.Predio) AS TotalFuncionarios,
+    (SELECT COUNT(*) FROM AssociarProfessor ap WHERE ap.Cidade = ue.Cidade AND ap.Estado = ue.Estado AND ap.Pais = ue.Pais AND ap.Predio = ue.Predio) AS TotalProfessores
+FROM 
+    UnidadeEscola ue
+
 
 
 -- listar disciplinas que compoem um curso especifico
