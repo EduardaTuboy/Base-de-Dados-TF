@@ -1,10 +1,10 @@
--- Membros - Grupo 5
+-- Membros Grupo 5
 -- Eduarda Tuboy Nardin 13732405
 -- Gabriel Hyppolito 14571810
 -- Juan Marques Jordao 14758742
 -- Rafael Brazolin Alves Mansur 14604030
 
--- Tabela Usuario
+
 CREATE TABLE Usuario (
     Nome VARCHAR(50),
     Sobrenome VARCHAR(50),
@@ -18,7 +18,7 @@ CREATE TABLE Usuario (
     CONSTRAINT EmailUsuario UNIQUE (Email)
 );
 
--- Tabelas Especializadas (Aluno, Professor, Funcionário)
+
 CREATE TABLE Aluno (
     Nome VARCHAR(50),
     Sobrenome VARCHAR(50),
@@ -46,7 +46,7 @@ CREATE TABLE Professor (
     FOREIGN KEY (Nome, Sobrenome, Telefone) REFERENCES Usuario(Nome, Sobrenome, Telefone)
 );
 
--- Tabela Departamento
+
 CREATE TABLE Departamento (
     Codigo VARCHAR(10) PRIMARY KEY,
     Nome VARCHAR(100) NOT NULL,
@@ -59,7 +59,7 @@ CREATE TABLE Departamento (
     FOREIGN KEY (NomeProf,SobrenomeProf,TelefoneProf) REFERENCES Professor(Nome,Sobrenome,Telefone)
 );
 
--- Tabela Curso
+
 CREATE TABLE Curso (
     Codigo VARCHAR(10) PRIMARY KEY,
     Nome VARCHAR(100) NOT NULL,
@@ -72,7 +72,7 @@ CREATE TABLE Curso (
     FOREIGN KEY (CodigoDepartamento) REFERENCES Departamento(Codigo)
 );
 
--- Tabela Disciplina
+
 CREATE TABLE Disciplina (
     Codigo VARCHAR(10) PRIMARY KEY,
     Nome VARCHAR(100) NOT NULL,
@@ -99,7 +99,7 @@ CREATE TABLE Compor (
     FOREIGN KEY (CodigoDisciplina) REFERENCES Disciplina(Codigo)
 );
 
--- Tabela Matricula
+
 CREATE TABLE Matricula (
     NomeAluno VARCHAR(50),
     SobrenomeAluno VARCHAR(50),
@@ -120,7 +120,7 @@ CREATE TABLE Matricula (
     FOREIGN KEY (CodigoDisc) REFERENCES Disciplina(Codigo)
 );
 
--- Tabelas Restantes (exemplos com 5+ tuplas)
+
 CREATE TABLE SalaCurso (
     CodigoCurso VARCHAR(10),
     Sala VARCHAR(20),
@@ -135,7 +135,7 @@ CREATE TABLE PreRequisitos (
     FOREIGN KEY (CodigoCurso) REFERENCES Curso(Codigo)
 );
 
--- Demais tabelas (estrutura e inserções reduzidas)
+
 CREATE TABLE Ministracao (
     InicioMinistracao DATE,
     FimMinistracao DATE,
@@ -148,7 +148,7 @@ CREATE TABLE Ministracao (
     FOREIGN KEY (NomeProf, SobrenomeProf, TelefoneProf) REFERENCES Professor(Nome, Sobrenome, Telefone)
 );
 
--- Tabela UnidadeEscola
+
 CREATE TABLE UnidadeEscola (
     Cidade VARCHAR(50),
     Estado VARCHAR(50),
@@ -157,17 +157,17 @@ CREATE TABLE UnidadeEscola (
     PRIMARY KEY (Cidade, Estado, Pais, Predio)
 );
 
--- Tabela Regras
+
 CREATE TABLE Regras (
     Regra VARCHAR(100) PRIMARY KEY
 );
 
--- Tabela Necessidades
+
 CREATE TABLE Necessidades (
     Necessidade VARCHAR(100) PRIMARY KEY
 );
 
--- Tabela Mensagem
+
 CREATE TABLE Mensagem (
     NomeUsuario VARCHAR(50),
     SobrenomeUsuario VARCHAR(50),
@@ -179,14 +179,14 @@ CREATE TABLE Mensagem (
     FOREIGN KEY (NomeUsuario, SobrenomeUsuario, TelefoneUsuario) REFERENCES Usuario(Nome, Sobrenome, Telefone)
 );
 
--- Tabela SenhaUsuario
+
 CREATE TABLE SenhaUsuario (
     Email VARCHAR(100) PRIMARY KEY,
     Senha VARCHAR(100) NOT NULL,
     FOREIGN KEY (Email) REFERENCES Usuario(Email)
 );
 
--- Tabela Receber
+
 CREATE TABLE Receber (
     NomeRemetente VARCHAR(50),
     SobrenomeRemetente VARCHAR(50),
@@ -202,7 +202,7 @@ CREATE TABLE Receber (
     FOREIGN KEY (NomeRemetente, SobrenomeRemetente, TelefoneRemetente, TempoMensagem, DataMensagem) REFERENCES Mensagem(NomeUsuario, SobrenomeUsuario, TelefoneUsuario, TempoMensagem, DataMensagem)
 );
 
--- Tabela Exigir
+
 CREATE TABLE Exigir (
     Regra VARCHAR(100),
     CodigoCurso VARCHAR(10),
@@ -211,7 +211,7 @@ CREATE TABLE Exigir (
     FOREIGN KEY (CodigoCurso) REFERENCES Curso(Codigo)
 );
 
--- Tabela Necessitar
+
 CREATE TABLE Necessitar (
     Necessidade VARCHAR(100),
     CodigoCurso VARCHAR(10),
@@ -220,7 +220,7 @@ CREATE TABLE Necessitar (
     FOREIGN KEY (CodigoCurso) REFERENCES Curso(Codigo)
 );
 
--- Tabela Avaliar
+
 CREATE TABLE Avaliar (
     CodigoDisc VARCHAR(10),
     NomeAluno VARCHAR(50),
