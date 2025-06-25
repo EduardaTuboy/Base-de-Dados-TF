@@ -1802,32 +1802,32 @@ INSERT INTO Matricula (NomeAluno, SobrenomeAluno, TelefoneAluno, CodigoDisc, Dat
 ('Tatiane', 'Nogueira', '(11) 98765-4409', 'HIST101-1', '2025-07-25', TRUE, FALSE, FALSE, FALSE, NULL, NULL, 'Mensalidade50%', '2025-08-04', 44.31);
 
 INSERT INTO SalaCurso (CodigoCurso, Sala) VALUES
--- Ciências Exatas (6 cursos)
+-- Ciências Exatas 
 ('MAT-101', 'A101'),       -- Cálculo (teórica)
 ('FIS-101', 'LAB-F1'),     -- Física Clássica (laboratório)
 ('QUI-101', 'LAB-Q1'),     -- Química Geral (laboratório)
 ('MATF-201', 'A205'),      -- Matemática Financeira (informática)
 ('FISQ-301', 'LAB-FQ'),    -- Física Quântica (laboratório avançado)
 
--- Humanidades (4 cursos)
+-- Humanidades 
 ('HIST-101', 'H101'),      -- História Antiga
 ('GEO-101', 'H205'),       -- Geografia Humana
 ('FIL-101', 'H102'),       -- Filosofia Contemporânea
 ('SOC-101', 'H303'),       -- Sociologia Urbana
 
--- Linguagens (5 cursos)
+-- Linguagens 
 ('PORT-101', 'L201'),      -- Gramática Normativa
 ('ING-101', 'MULTI1'),     -- Inglês Instrumental (audiovisual)
 ('ESP-101', 'L202'),       -- Espanhol Básico
 ('LIT-101', 'H104'),      -- Literatura Mundial
 ('LITB-201', 'H105'),      -- Literatura Brasileira Moderna (*sala nova*)
 
--- Artes/Educação Física (3 cursos)
+-- Artes/Educação Física 
 ('ART-101', 'ATELIE1'),    -- História da Arte
 ('EDF-101', 'GIN1'),       -- Fisiologia do Exercício
 ('ARTD-201', 'LAB-DIG'),   -- Design Digital
 
--- Especializados (3 cursos)
+-- Especializados 
 ('PSI-101', 'PSI1'),       -- Psicologia do Desenvolvimento
 ('ROB-301', 'LAB-ROB'),    -- Robótica Educacional
 ('BIOM-301', 'LAB-BIO');   -- Biologia Molecular
@@ -1856,7 +1856,7 @@ INSERT INTO PreRequisitos (CodigoCurso, PreRequisito) VALUES
 ('BIOM-301', 'QUI-101'),      -- Biologia Molecular requer Química Geral
 ('PSI-101', 'SOC-101'),       -- Psicologia do Desenvolvimento requer Sociologia Urbana
 
--- Cursos com múltiplos pré-requisitos (exemplos adicionais)
+-- Cursos com múltiplos pré-requisitos
 ('GEO-101', 'HIST-101'),      -- Geografia Humana requer História Antiga
 ('FIL-101', 'HIST-101'),      -- Filosofia Contemporânea requer História Antiga
 ('ART-101', 'HIST-101'),      -- História da Arte requer História Antiga
@@ -2015,7 +2015,7 @@ INSERT INTO Receber (NomeRemetente, SobrenomeRemetente, TelefoneRemetente, NomeD
 ('William', 'Queiroz', '(11) 98765-4365', 'Fabio', 'Zimmermann', '(11) 98765-4350', '15:30:00', '2023-10-21');
 
 INSERT INTO SenhaUsuario (Email, Senha) VALUES
--- Senhas para Alunos (padrão: A+primeiro nome+ano nascimento+!)
+-- Senhas para Alunos 
 ('ana.silva@escola.com', 'AAna2005!'),
 ('bruno.oliveira@escola.com', 'ABruno2006!'),
 ('carla.santos@escola.com', 'ACarla2005!'),
@@ -2057,7 +2057,7 @@ INSERT INTO SenhaUsuario (Email, Senha) VALUES
 ('tatiane.nogueira@escola.com', 'ATatiane2005!'),
 ('vinicius.oliveira@escola.com', 'AVinicius2006!'),
 
--- Senhas para Professores (padrão: P+primeiro nome+ano nascimento+!)
+-- Senhas para Professores
 ('ricardo.mendes@escola.com', 'PRicardo1980!'),
 ('sandra.vieira@escola.com', 'PSandra1975!'),
 ('tiago.nunes@escola.com', 'PTiago1982!'),
@@ -2089,7 +2089,7 @@ INSERT INTO SenhaUsuario (Email, Senha) VALUES
 ('thales.ximenes@escola.com', 'PThales1985!'),
 ('ursula.yamada@escola.com', 'PÚrsula1976!'),
 
--- Senhas para Funcionários (padrão: F+primeiro nome+ano nascimento+!)
+-- Senhas para Funcionários 
 ('beto.silveira@escola.com', 'FBeto1988!'),
 ('cecilia.uchoa@escola.com', 'FCecília1990!'),
 ('dario.valente@escola.com', 'FDário1987!'),
@@ -2112,7 +2112,7 @@ INSERT INTO SenhaUsuario (Email, Senha) VALUES
 ('valter.oliveira@escola.com', 'FValter1993!');
 
 INSERT INTO Exigir (Regra, CodigoCurso) VALUES
--- Cursos com 3 regras (5 cursos)
+
 -- 1. Cálculo Diferencial e Integral (MAT-101)
 ('Frequência mínima de 75% para aprovação', 'MAT-101'),
 ('Nota mínima de 6.0 para aprovação (escala 0-10)', 'MAT-101'),
@@ -2138,7 +2138,6 @@ INSERT INTO Exigir (Regra, CodigoCurso) VALUES
 ('Estágio supervisionado obrigatório para cursos técnicos', 'ROB-301'),
 ('Média mínima de 7.0 nos trabalhos para aprovação', 'ROB-301'),
 
--- Cursos com 2 regras (2 cursos)
 -- 1. Química Geral (QUI-101)
 ('Frequência mínima de 70% para aprovação', 'QUI-101'),
 ('Nota mínima de 6.0 e frequência de 75% para aprovação', 'QUI-101'),
@@ -2147,7 +2146,6 @@ INSERT INTO Exigir (Regra, CodigoCurso) VALUES
 ('Frequência mínima de 50% para aprovação', 'ING-101'),
 ('Tolerância máxima de 15 minutos para atrasos', 'ING-101'),
 
--- Demais cursos com 1 regra (13 cursos)
 -- 1. Matemática Financeira Avançada (MATF-201)
 ('Frequência mínima de 60% para aprovação', 'MATF-201'),
 
@@ -2188,7 +2186,7 @@ INSERT INTO Exigir (Regra, CodigoCurso) VALUES
 ('Apresentação do TCC obrigatória para conclusão do curso', 'BIOM-301');
 
 INSERT INTO Necessitar (Necessidade, CodigoCurso) VALUES
--- Cursos com 3 necessidades (2 cursos)
+
 -- 1. Química Geral (QUI-101)
 ('Laboratório de Química com capela e reagentes básicos', 'QUI-101'),
 ('Projetor multimídia em todas as salas', 'QUI-101'),
@@ -2199,7 +2197,6 @@ INSERT INTO Necessitar (Necessidade, CodigoCurso) VALUES
 ('Impressora 3D para cursos de design e engenharia', 'BIOM-301'),
 ('Wi-Fi de alta velocidade em todo o campus', 'BIOM-301'),
 
--- Cursos com 2 necessidades (5 cursos)
 -- 1. Física Clássica (FIS-101)
 ('Laboratório de Física com kits de óptica e mecânica', 'FIS-101'),
 ('Câmera para gravação de aulas online', 'FIS-101'),
@@ -2383,3 +2380,99 @@ VALUES
 ('Curitiba', 'PR', 'Brasil', 'Torre do Conhecimento', 'Sueli', 'Werneck', '(11) 98765-4388'),
 ('Lisboa', 'Lisboa', 'Portugal', 'Edifício Marquês de Pombal', 'Thales', 'Ximenes', '(11) 98765-4389'),
 ('Porto', 'Porto', 'Portugal', 'Campus Ribeira', 'Úrsula', 'Yamada', '(11) 98765-4390');
+
+INSERT INTO AssociarDisciplinas (Cidade, Estado, Pais, Predio, CodigoDisc) VALUES
+-- Associações para unidades no Brasil
+('São Paulo', 'SP', 'Brasil', 'Prédio Acadêmico I', 'MAT101-1'),
+('São Paulo', 'SP', 'Brasil', 'Prédio Acadêmico I', 'MAT101-2'),
+('São Paulo', 'SP', 'Brasil', 'Prédio de Laboratórios', 'FIS101-1'),
+('São Paulo', 'SP', 'Brasil', 'Prédio de Laboratórios', 'QUI101-1'),
+('Rio de Janeiro', 'RJ', 'Brasil', 'Campus Praia Vermelha', 'MATF201-1'),
+('Rio de Janeiro', 'RJ', 'Brasil', 'Prédio Histórico', 'HIST101-1'),
+('Belo Horizonte', 'MG', 'Brasil', 'Bloco A', 'GEO101-1'),
+('Belo Horizonte', 'MG', 'Brasil', 'Bloco B', 'FIL101-1'),
+('Porto Alegre', 'RS', 'Brasil', 'Prédio Central', 'SOC101-1'),
+('Curitiba', 'PR', 'Brasil', 'Torre do Conhecimento', 'PORT101-1'),
+('Salvador', 'BA', 'Brasil', 'Prédio Cultural', 'ING101-1'),
+('Recife', 'PE', 'Brasil', 'Campus Recife Antigo', 'ESP101-1'),
+('Brasília', 'DF', 'Brasil', 'Asa Norte', 'LIT101-1'),
+('Fortaleza', 'CE', 'Brasil', 'Prédio Litorâneo', 'LITB201-1'),
+
+-- Associações para unidades em Portugal
+('Lisboa', 'Lisboa', 'Portugal', 'Edifício Marquês de Pombal', 'ART101-1'),
+('Porto', 'Porto', 'Portugal', 'Campus Ribeira', 'EDF101-1'),
+('Coimbra', 'Coimbra', 'Portugal', 'Prédio Universitário', 'ARTD201-1'),
+
+-- Associações para unidades nos EUA
+('Nova York', 'NY', 'Estados Unidos', 'Manhattan Campus', 'PSI101-1'),
+('Boston', 'MA', 'Estados Unidos', 'Harvard Annex', 'ROB301-1'),
+('Los Angeles', 'CA', 'Estados Unidos', 'Sunset Tower', 'BIOM301-1'),
+
+-- Associações adicionais para garantir que todas as disciplinas estejam em pelo menos uma unidade
+('São Paulo', 'SP', 'Brasil', 'Prédio Acadêmico I', 'FIS101-1'),
+('Rio de Janeiro', 'RJ', 'Brasil', 'Campus Praia Vermelha', 'QUI101-1'),
+('Belo Horizonte', 'MG', 'Brasil', 'Bloco A', 'MAT101-1'),
+('Porto Alegre', 'RS', 'Brasil', 'Prédio Central', 'MAT101-2'),
+('Curitiba', 'PR', 'Brasil', 'Torre do Conhecimento', 'MATF201-1'),
+('Salvador', 'BA', 'Brasil', 'Prédio Cultural', 'HIST101-1'),
+('Recife', 'PE', 'Brasil', 'Campus Recife Antigo', 'GEO101-1'),
+('Brasília', 'DF', 'Brasil', 'Asa Norte', 'FIL101-1'),
+('Fortaleza', 'CE', 'Brasil', 'Prédio Litorâneo', 'SOC101-1'),
+('Lisboa', 'Lisboa', 'Portugal', 'Edifício Marquês de Pombal', 'PORT101-1'),
+('Porto', 'Porto', 'Portugal', 'Campus Ribeira', 'ING101-1'),
+('Coimbra', 'Coimbra', 'Portugal', 'Prédio Universitário', 'ESP101-1'),
+('Nova York', 'NY', 'Estados Unidos', 'Manhattan Campus', 'LIT101-1'),
+('Boston', 'MA', 'Estados Unidos', 'Harvard Annex', 'LITB201-1'),
+('Los Angeles', 'CA', 'Estados Unidos', 'Sunset Tower', 'ART101-1'),
+('Toronto', 'Ontário', 'Canadá', 'Maple Leaf Building', 'EDF101-1'),
+('Tóquio', 'Tóquio', 'Japão', 'Sakura Hall', 'ARTD201-1'),
+('Toronto', 'Ontário', 'Canadá', 'Maple Leaf Building', 'PSI101-1'),
+('Tóquio', 'Tóquio', 'Japão', 'Sakura Hall', 'ROB301-1'),
+('São Paulo', 'SP', 'Brasil', 'Prédio de Laboratórios', 'BIOM301-1');
+
+INSERT INTO AssociarCurso (Cidade, Estado, Pais, Predio, CodigoCurso) VALUES
+-- Associações para unidades no Brasil (cursos de Ciências Exatas e principais)
+('São Paulo', 'SP', 'Brasil', 'Prédio Acadêmico I', 'MAT-101'),
+('São Paulo', 'SP', 'Brasil', 'Prédio de Laboratórios', 'FIS-101'),
+('São Paulo', 'SP', 'Brasil', 'Prédio de Laboratórios', 'QUI-101'),
+('Rio de Janeiro', 'RJ', 'Brasil', 'Campus Praia Vermelha', 'MATF-201'),
+('Belo Horizonte', 'MG', 'Brasil', 'Bloco A', 'FISQ-301'),
+('Porto Alegre', 'RS', 'Brasil', 'Prédio Central', 'HIST-101'),
+('Curitiba', 'PR', 'Brasil', 'Torre do Conhecimento', 'GEO-101'),
+('Salvador', 'BA', 'Brasil', 'Prédio Cultural', 'FIL-101'),
+('Recife', 'PE', 'Brasil', 'Campus Recife Antigo', 'SOC-101'),
+('Brasília', 'DF', 'Brasil', 'Asa Norte', 'PORT-101'),
+('Fortaleza', 'CE', 'Brasil', 'Prédio Litorâneo', 'ING-101'),
+
+-- Associações para unidades em Portugal (cursos de Humanidades e Linguagens)
+('Lisboa', 'Lisboa', 'Portugal', 'Edifício Marquês de Pombal', 'ESP-101'),
+('Porto', 'Porto', 'Portugal', 'Campus Ribeira', 'LIT-101'),
+('Coimbra', 'Coimbra', 'Portugal', 'Prédio Universitário', 'LITB-201'),
+
+-- Associações para unidades nos EUA (cursos de Artes e especializados)
+('Nova York', 'NY', 'Estados Unidos', 'Manhattan Campus', 'ART-101'),
+('Boston', 'MA', 'Estados Unidos', 'Harvard Annex', 'EDF-101'),
+('Los Angeles', 'CA', 'Estados Unidos', 'Sunset Tower', 'ARTD-201'),
+
+-- Associações para outros países (cursos especializados)
+('Toronto', 'Ontário', 'Canadá', 'Maple Leaf Building', 'PSI-101'),
+('Tóquio', 'Tóquio', 'Japão', 'Sakura Hall', 'ROB-301'),
+
+-- Associações adicionais para garantir ampla cobertura
+('São Paulo', 'SP', 'Brasil', 'Prédio Acadêmico I', 'FIS-101'),
+('Rio de Janeiro', 'RJ', 'Brasil', 'Prédio Histórico', 'HIST-101'),
+('Belo Horizonte', 'MG', 'Brasil', 'Bloco B', 'GEO-101'),
+('Porto Alegre', 'RS', 'Brasil', 'Prédio Central', 'FIL-101'),
+('Curitiba', 'PR', 'Brasil', 'Torre do Conhecimento', 'SOC-101'),
+('Salvador', 'BA', 'Brasil', 'Prédio Cultural', 'PORT-101'),
+('Recife', 'PE', 'Brasil', 'Campus Recife Antigo', 'ING-101'),
+('Brasília', 'DF', 'Brasil', 'Asa Norte', 'ESP-101'),
+('Fortaleza', 'CE', 'Brasil', 'Prédio Litorâneo', 'LIT-101'),
+('Lisboa', 'Lisboa', 'Portugal', 'Edifício Marquês de Pombal', 'LITB-201'),
+('Porto', 'Porto', 'Portugal', 'Campus Ribeira', 'ART-101'),
+('Coimbra', 'Coimbra', 'Portugal', 'Prédio Universitário', 'EDF-101'),
+('Nova York', 'NY', 'Estados Unidos', 'Manhattan Campus', 'ARTD-201'),
+('Boston', 'MA', 'Estados Unidos', 'Harvard Annex', 'PSI-101'),
+('Los Angeles', 'CA', 'Estados Unidos', 'Sunset Tower', 'ROB-301'),
+('Toronto', 'Ontário', 'Canadá', 'Maple Leaf Building', 'BIOM-301'),
+('Tóquio', 'Tóquio', 'Japão', 'Sakura Hall', 'MAT-101');

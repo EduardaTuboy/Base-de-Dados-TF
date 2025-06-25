@@ -104,7 +104,6 @@ CREATE TABLE Matricula (
     NomeAluno VARCHAR(50),
     SobrenomeAluno VARCHAR(50),
     TelefoneAluno VARCHAR(20),
-    CodigoDisciplina VARCHAR(10),
     CodigoDisc VARCHAR(10),
     DataMatric DATE,
     Ativa BOOLEAN,
