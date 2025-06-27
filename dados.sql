@@ -343,6 +343,32 @@ VALUES
 ('2025-08-02', '2025-12-04', 'LITB201-1', 'Márcia', 'Quintana', '(11) 98765-4382'),
 ('2025-08-02', '2025-12-04', 'ARTD201-1', 'Ivana', 'Holanda', '(11) 98765-4358');
 
+INSERT INTO Turma (CodigoDisc, NomeProf, SobrenomeProf, TelefoneProf)
+VALUES
+-- Turmas do primeiro semestre de 2025
+('MAT101-1', 'Ricardo', 'Mendes', '(11) 98765-4336'),
+('MAT101-2', 'Dante', 'Cavalcanti', '(11) 98765-4353'),
+('FIS101-1', 'Tiago', 'Nunes', '(11) 98765-4338'),
+('QUI101-1', 'Úrsula', 'Campos', '(11) 98765-4339'),
+('HIST101-1', 'Vitor', 'Duarte', '(11) 98765-4340'),
+('GEO101-1', 'Wanessa', 'Oliveira', '(11) 98765-4341'),
+('FIL101-1', 'Bernardo', 'Andrade', '(11) 98765-4351'),
+('PORT101-1', 'Sandra', 'Vieira', '(11) 98765-4337'),
+('ING101-1', 'Alice', 'Teixeira', '(11) 98765-4345'),
+('ART101-1', 'Yara', 'Queiroz', '(11) 98765-4343'),
+
+-- Turmas do segundo semestre de 2025
+('MATF201-1', 'Norberto', 'Ramos', '(11) 98765-4383'),
+('SOC101-1', 'Clarice', 'Borges', '(11) 98765-4352'),
+('ESP101-1', 'Giovanna', 'Fontes', '(11) 98765-4356'),
+('LIT101-1', 'Elisa', 'Dias', '(11) 98765-4354'),
+('EDF101-1', 'Zacarias', 'Rocha', '(11) 98765-4344'),
+('PSI101-1', 'Karina', 'Jesus', '(11) 98765-4360'),
+('ROB301-1', 'Thales', 'Ximenes', '(11) 98765-4389'),
+('BIOM301-1', 'Olívia', 'Santana', '(11) 98765-4384'),
+('LITB201-1', 'Márcia', 'Quintana', '(11) 98765-4382'),
+('ARTD201-1', 'Ivana', 'Holanda', '(11) 98765-4358');
+
 INSERT INTO Compor (CodigoCurso, CodigoDisciplina)
 VALUES
 

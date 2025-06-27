@@ -18,9 +18,14 @@ Os arquivos deste repositório estão organizados da seguinte forma, em ordem de
 * *criacao_base.sql:* script para a criação do banco de dados *escola*.
 * *criacao_tabelas.sql:* script com os comandos CREATE TABLE para criar as tabelas do banco de dados.
 * *dados.sql:* script com os comandos INSERT INTO para popular as tabelas criadas com dados.
+* *dados_usuarios_alunos_associar.sql:* script com os comandos INSERT INTO para popular as tabelas criadas com dados.
+* *dados_senhas.sql:* script com os comandos INSERT INTO para popular as tabelas criadas com dados.
+* *dados_matriculas.sql:* script com os comandos INSERT INTO para popular as tabelas criadas com dados.
 * *consultas.sql:* script com os SELECTs criados para o teste do banco de dados criado no projeto.
 * *indices.sql:* script com os comandos CREATE INDEX que o grupo desenvolveu.
 * *view.sql:* script com os comandos CREATE VIEW desenvolvidos para o projeto.
+
+Obs: O código *gerar_usuarios.py* utiliza da biblioteca Faker para gerar uma carga alta de dados na base.
 
 ## Guia
 
@@ -40,6 +45,7 @@ Passo a passo para configurar o ambiente e executar o projeto.
    2. Clique com o botão direito no banco *escola* e selecione "Query Tool".
    3. Nesta nova janela, abra e execute o arquivo *criacao_tabelas.sql* para criar toda a estrutura.
    4. Na mesma janela, abra e execute o arquivo *dados.sql* para popular as tabelas.
+   5. Ainda na mesma janela, execute os arquivos nessa ordem *dados_usuarios_alunos_associar.sql*, *dados_senhas.sql*, *dados_matriculas.sql* para adicionar uma carga extra de dados possibilitando o SGBD utilizar o índice nas próximas etapas.
 4. Executar e verificar as consultas:
    1. Na mesma janela de "Query Tool" abra o arquivo *consultas.sql:*.
    2. Ao executar todo o script, o PostgreSQL só mostra o resultado do último SELECT do script na aba de "Data Output", portanto, para ver o resultado de cada consulta individualmente,

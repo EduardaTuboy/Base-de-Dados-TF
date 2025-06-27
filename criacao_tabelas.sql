@@ -11,7 +11,7 @@ CREATE TABLE Usuario (
     Telefone VARCHAR(20),
     Posicao VARCHAR(50),
     Data_Nasc DATE,
-    Endereco VARCHAR(100),
+    Endereco VARCHAR(200),
     Sexo CHAR(1),
     Email VARCHAR(100) NOT NULL,
     PRIMARY KEY (Nome, Sobrenome, Telefone),
@@ -133,7 +133,7 @@ CREATE TABLE Turma (
 CREATE TABLE SalaCurso (
     CodigoDepartamento VARCHAR(10),
     Sala VARCHAR(20),
-    PRIMARY KEY (CodigoCurso, Sala),
+    PRIMARY KEY (CodigoDepartamento, Sala),
     FOREIGN KEY (CodigoDepartamento) REFERENCES Departamento(Codigo)
 );
 
