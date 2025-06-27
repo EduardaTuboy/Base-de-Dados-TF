@@ -53,7 +53,6 @@ CREATE TABLE Departamento (
     NomeProf VARCHAR(50),
     SobrenomeProf VARCHAR(50),
     TelefoneProf VARCHAR(20),
-    CodigoDisciplina VARCHAR(10),
     CONSTRAINT NomeDepartamento UNIQUE (Nome),
     CONSTRAINT Chefe UNIQUE (NomeProf,SobrenomeProf,TelefoneProf),
     FOREIGN KEY (NomeProf,SobrenomeProf,TelefoneProf) REFERENCES Professor(Nome,Sobrenome,Telefone)
@@ -122,10 +121,10 @@ CREATE TABLE Matricula (
 
 
 CREATE TABLE SalaCurso (
-    CodigoCurso VARCHAR(10),
+    CodigoDepartamento VARCHAR(10),
     Sala VARCHAR(20),
     PRIMARY KEY (CodigoCurso, Sala),
-    FOREIGN KEY (CodigoCurso) REFERENCES Curso(Codigo)
+    FOREIGN KEY (CodigoDepartamento) REFERENCES Departamento(Codigo)
 );
 
 CREATE TABLE PreRequisitos (

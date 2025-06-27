@@ -202,39 +202,35 @@ VALUES
 ('Úrsula', 'Nobre', '(11) 98765-4379','Tecnico'),
 ('Valter', 'Oliveira', '(11) 98765-4380','Tecnico');
 
-INSERT INTO Departamento (Codigo, Nome, NomeProf, SobrenomeProf, TelefoneProf, CodigoDisciplina)
+INSERT INTO Departamento (Codigo, Nome, NomeProf, SobrenomeProf, TelefoneProf)
 VALUES
-('DEPT-MAT', 'Departamento de Matemática', 'Ricardo', 'Mendes', '(11) 98765-4336', 'MAT-101'),
-('DEPT-FIS', 'Departamento de Física', 'Tiago', 'Nunes', '(11) 98765-4338', 'FIS-101'),
-('DEPT-QUI', 'Departamento de Química', 'Úrsula', 'Campos', '(11) 98765-4339', 'QUI-101'),
-('DEPT-MATF', 'Departamento de Matemática Financeira', 'Norberto', 'Ramos', '(11) 98765-4383', 'MATF-201'),
-('DEPT-FISQ', 'Departamento de Física Quântica', 'Fernando', 'Esteves', '(11) 98765-4355', 'FISQ-301'),
-('DEPT-QUIO', 'Departamento de Química Orgânica', 'Heitor', 'Guerra', '(11) 98765-4357', 'QUIO-201'),
-
-('DEPT-HIST', 'Departamento de História', 'Vitor', 'Duarte', '(11) 98765-4340', 'HIST-101'),
-('DEPT-GEO', 'Departamento de Geografia', 'Wanessa', 'Oliveira', '(11) 98765-4341', 'GEO-101'),
-('DEPT-FIL', 'Departamento de Filosofia', 'Bernardo', 'Andrade', '(11) 98765-4351', 'FIL-101'),
-('DEPT-SOC', 'Departamento de Sociologia', 'Clarice', 'Borges', '(11) 98765-4352', 'SOC-101'),
-
-('DEPT-PORT', 'Departamento de Português', 'Sandra', 'Vieira', '(11) 98765-4337', 'PORT-101'),
-('DEPT-ING', 'Departamento de Inglês', 'Alice', 'Teixeira', '(11) 98765-4345', 'ING-101'),
-('DEPT-ESP', 'Departamento de Espanhol', 'Giovanna', 'Fontes', '(11) 98765-4356', 'ESP-101'),
-('DEPT-FRA', 'Departamento de Francês', 'Quésia', 'Ulhoa', '(11) 98765-4386', 'FRA-201'),
-('DEPT-LIT', 'Departamento de Literatura', 'Elisa', 'Dias', '(11) 98765-4354', 'LIT-101'),
-('DEPT-LITB', 'Departamento de Literatura Brasileira', 'Márcia', 'Quintana', '(11) 98765-4382', 'LITB-201'),
-
-('DEPT-ART', 'Departamento de Artes', 'Yara', 'Queiroz', '(11) 98765-4343', 'ART-101'),
-('DEPT-EDF', 'Departamento de Educação Física', 'Zacarias', 'Rocha', '(11) 98765-4344', 'EDF-101'),
-('DEPT-ARTD', 'Departamento de Arte Digital', 'Ivana', 'Holanda', '(11) 98765-4358', 'ARTD-201'),
-
-('DEPT-PSI', 'Departamento de Psicologia', 'Karina', 'Jesus', '(11) 98765-4360', 'PSI-101'),
-('DEPT-PSIP', 'Departamento de Psicopedagogia', 'Sueli', 'Werneck', '(11) 98765-4388', 'PSIP-201'),
-('DEPT-EDTEC', 'Departamento de Educação Tecnológica', 'Luiz', 'Pereira', '(11) 98765-4381', 'EDTEC-201'),
-('DEPT-ROB', 'Departamento de Robótica Educacional', 'Thales', 'Ximenes', '(11) 98765-4389', 'ROB-301'),
-('DEPT-QUIA', 'Departamento de Química Analítica', 'Úrsula', 'Yamada', '(11) 98765-4390', 'QUIA-301'),
-('DEPT-BIOM', 'Departamento de Biologia Molecular', 'Olívia', 'Santana', '(11) 98765-4384', 'BIOM-301'),
-('DEPT-FISN', 'Departamento de Física Nuclear', 'Rogério', 'Vasconcelos', '(11) 98765-4387', 'FISN-401'),
-('DEPT-EDFIN', 'Departamento de Educação Financeira', 'Julio', 'Ivo', '(11) 98765-4359', 'EDFIN-201');
+('DEPT-MAT', 'Departamento de Matemática', 'Ricardo', 'Mendes', '(11) 98765-4336'),
+('DEPT-FIS', 'Departamento de Física', 'Tiago', 'Nunes', '(11) 98765-4338'),
+('DEPT-QUI', 'Departamento de Química', 'Úrsula', 'Campos', '(11) 98765-4339'),
+('DEPT-MATF', 'Departamento de Matemática Financeira', 'Norberto', 'Ramos', '(11) 98765-4383'),
+('DEPT-FISQ', 'Departamento de Física Quântica', 'Fernando', 'Esteves', '(11) 98765-4355'),
+('DEPT-QUIO', 'Departamento de Química Orgânica', 'Heitor', 'Guerra', '(11) 98765-4357'),
+('DEPT-HIST', 'Departamento de História', 'Vitor', 'Duarte', '(11) 98765-4340'),
+('DEPT-GEO', 'Departamento de Geografia', 'Wanessa', 'Oliveira', '(11) 98765-4341'),
+('DEPT-FIL', 'Departamento de Filosofia', 'Bernardo', 'Andrade', '(11) 98765-4351'),
+('DEPT-SOC', 'Departamento de Sociologia', 'Clarice', 'Borges', '(11) 98765-4352'),
+('DEPT-PORT', 'Departamento de Português', 'Sandra', 'Vieira', '(11) 98765-4337'),
+('DEPT-ING', 'Departamento de Inglês', 'Alice', 'Teixeira', '(11) 98765-4345'),
+('DEPT-ESP', 'Departamento de Espanhol', 'Giovanna', 'Fontes', '(11) 98765-4356'),
+('DEPT-FRA', 'Departamento de Francês', 'Quésia', 'Ulhoa', '(11) 98765-4386'),
+('DEPT-LIT', 'Departamento de Literatura', 'Elisa', 'Dias', '(11) 98765-4354'),
+('DEPT-LITB', 'Departamento de Literatura Brasileira', 'Márcia', 'Quintana', '(11) 98765-4382'),
+('DEPT-ART', 'Departamento de Artes', 'Yara', 'Queiroz', '(11) 98765-4343'),
+('DEPT-EDF', 'Departamento de Educação Física', 'Zacarias', 'Rocha', '(11) 98765-4344'),
+('DEPT-ARTD', 'Departamento de Arte Digital', 'Ivana', 'Holanda', '(11) 98765-4358'),
+('DEPT-PSI', 'Departamento de Psicologia', 'Karina', 'Jesus', '(11) 98765-4360'),
+('DEPT-PSIP', 'Departamento de Psicopedagogia', 'Sueli', 'Werneck', '(11) 98765-4388'),
+('DEPT-EDTEC', 'Departamento de Educação Tecnológica', 'Luiz', 'Pereira', '(11) 98765-4381'),
+('DEPT-ROB', 'Departamento de Robótica Educacional', 'Thales', 'Ximenes', '(11) 98765-4389'),
+('DEPT-QUIA', 'Departamento de Química Analítica', 'Úrsula', 'Yamada', '(11) 98765-4390'),
+('DEPT-BIOM', 'Departamento de Biologia Molecular', 'Olívia', 'Santana', '(11) 98765-4384'),
+('DEPT-FISN', 'Departamento de Física Nuclear', 'Rogério', 'Vasconcelos', '(11) 98765-4387'),
+('DEPT-EDFIN', 'Departamento de Educação Financeira', 'Julio', 'Ivo', '(11) 98765-4359');
 
 INSERT INTO Curso (Codigo, Nome, CodigoDepartamento, Classificacao, CargaHoraria, NumeroVagas, Ementa)
 VALUES
@@ -1781,36 +1777,27 @@ INSERT INTO Matricula (NomeAluno, SobrenomeAluno, TelefoneAluno, CodigoDisc, Dat
 ('Henrique', 'Rodrigues', '(11) 98765-4328', 'BIOM301-1', '2025-07-25', TRUE, FALSE, FALSE, FALSE, NULL, NULL, 'Mensalidade10%', '2025-08-04', 38.72),
 ('Tatiane', 'Nogueira', '(11) 98765-4409', 'HIST101-1', '2025-07-25', TRUE, FALSE, FALSE, FALSE, NULL, NULL, 'Mensalidade50%', '2025-08-04', 44.31);
 
-INSERT INTO SalaCurso (CodigoCurso, Sala) VALUES
- 
-('MAT-101', 'A101'),       
-('FIS-101', 'LAB-F1'),      
-('QUI-101', 'LAB-Q1'),      
-('MATF-201', 'A205'),       
-('FISQ-301', 'LAB-FQ'),     
-
-
-('HIST-101', 'H101'),     
-('GEO-101', 'H205'),      
-('FIL-101', 'H102'),      
-('SOC-101', 'H303'),      
-
-
-('PORT-101', 'L201'),     
-('ING-101', 'MULTI1'),      
-('ESP-101', 'L202'),       
-('LIT-101', 'H104'),      
-('LITB-201', 'H105'),      
-
-
-('ART-101', 'ATELIE1'),    
-('EDF-101', 'GIN1'),       
-('ARTD-201', 'LAB-DIG'),  
-
-
-('PSI-101', 'PSI1'),       
-('ROB-301', 'LAB-ROB'),    
-('BIOM-301', 'LAB-BIO');   
+INSERT INTO SalaCurso (CodigoDepartamento, Sala) VALUES
+('DEPT-MAT', 'A101'),
+('DEPT-FIS', 'LAB-F1'),
+('DEPT-QUI', 'LAB-Q1'),
+('DEPT-MATF', 'A205'),
+('DEPT-FISQ', 'LAB-FQ'),
+('DEPT-HIST', 'H101'),
+('DEPT-GEO', 'H205'),
+('DEPT-FIL', 'H102'),
+('DEPT-SOC', 'H303'),
+('DEPT-PORT', 'L201'),
+('DEPT-ING', 'MULTI1'),
+('DEPT-ESP', 'L202'),
+('DEPT-LIT', 'H104'),
+('DEPT-LITB', 'H105'),
+('DEPT-ART', 'ATELIE1'),
+('DEPT-EDF', 'GIN1'),
+('DEPT-ARTD', 'LAB-DIG'),
+('DEPT-PSI', 'PSI1'),
+('DEPT-ROB', 'LAB-ROB'),
+('DEPT-BIOM', 'LAB-BIO');
 
 INSERT INTO PreRequisitos (CodigoCurso, PreRequisito) VALUES
 
