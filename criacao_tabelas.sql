@@ -119,6 +119,16 @@ CREATE TABLE Matricula (
     FOREIGN KEY (CodigoDisc) REFERENCES Disciplina(Codigo)
 );
 
+CREATE TABLE Turma (
+    CodigoDisc VARCHAR(10),
+    NomeProf VARCHAR(50),
+    SobrenomeProf VARCHAR(50),
+    TelefoneProf VARCHAR(20),
+    PRIMARY KEY (CodigoDisc, NomeProf, SobrenomeProf, TelefoneProf),
+    FOREIGN KEY (NomeProf, SobrenomeProf, TelefoneProf) REFERENCES Professor(Nome, Sobrenome, Telefone),
+    FOREIGN KEY (CodigoDisc) REFERENCES Disciplina(Codigo)
+);
+
 
 CREATE TABLE SalaCurso (
     CodigoDepartamento VARCHAR(10),
